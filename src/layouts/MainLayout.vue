@@ -6,7 +6,7 @@
         <q-btn flat dense round icon="menu" aria-label="Menu" style="color: #ffffff" @click="toggleLeftDrawer" />
 
         <q-toolbar-title>
-          <a href="/"><img src="/images/logo.png" height="50" style="padding-top: 8px" /></a>
+          <a href="/"><img src="/images/logodark.png" height="50" style="padding-top: 8px" /></a>
         </q-toolbar-title>
 
         <q-toolbar-title v-if="$q.platform.is.desktop">
@@ -50,8 +50,11 @@
 
     <!-- TOOLBAR-FOR-MOBILE -->
     <div v-if="$q.platform.is.mobile" :class="`text-center ${theme}`">
-      <div style="margin: 10px">
-        <img src="/images/logo.png" height="50" style="padding-top: 8px" /><br />
+      <div v-if="theme == 'light'" style="margin: 10px">
+        <img src="/images/logolight.png" height="50" style="padding-top: 8px" /><br />
+      </div>
+      <div v-else style="margin: 10px">
+        <img src="/images/logodark.png" height="50" style="padding-top: 8px" /><br />
       </div>
       <div style="font-size: 16px; margin: 10px">
         <q-icon name="mail" size="24px" /><br />
@@ -73,8 +76,11 @@
       <q-separator color="gray" inset spaced />
       <br />
       <div class="row justify-around" style="height: 70px">
-        <div class="col-12 col-md-1">
-          <img src="/images/logo.png" height="50" style="padding-top: 8px" /><br />
+        <div v-if="theme == 'light'" class="col-12 col-md-1">
+          <img src="/images/logolight.png" height="50" style="padding-top: 8px" /><br />
+        </div>
+        <div v-else class="col-12 col-md-1">
+          <img src="/images/logodark.png" height="50" style="padding-top: 8px" /><br />
         </div>
         <div class="col-12 col-md-1">
           <q-icon name="mail" size="24px" /><br />
