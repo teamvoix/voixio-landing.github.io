@@ -1,10 +1,10 @@
 <template>
   <q-item clickable tag="a" target="_blank" :href="link">
     <q-item-section v-if="icon" avatar>
-      <q-icon style="color: #ffffff" :name="icon" />
+      <q-icon style="color: #000000" :name="icon" />
     </q-item-section>
 
-    <q-item-section style="color: #ffffff">
+    <q-item-section style="color: #000000">
       <q-item-label>{{ title }}</q-item-label>
     </q-item-section>
   </q-item>
