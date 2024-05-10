@@ -125,25 +125,8 @@ export default defineComponent({
     const $q = useQuasar();
     const { locale } = useI18n({ useScope: "global" });
     const theme = computed(() => baseStore.getTheme);
-    const t = useI18n();
 
-    const linksList = [
-      {
-        title: "Направления",
-        icon: "rocket",
-        link: "/info",
-      },
-      {
-        title: "+7 (727) 331 58 00",
-        icon: "phone",
-        link: "tel:+77273315800",
-      },
-      {
-        title: "team@voix.io",
-        icon: "mail",
-        link: "mailto:team@voix.io",
-      },
-    ];
+    const linksList = computed(() => baseStore.updateLinks());
 
     return {
       essentialLinks: linksList,
