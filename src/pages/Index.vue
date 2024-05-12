@@ -10,7 +10,8 @@
         <div class="text-container" style="max-width: 800px">
           <p style="font-size: 40px; margin-top: 10px">{{ $t('about.title') }}</p>
           <p style="font-size: 23px">{{ $t('about.text') }}</p>
-          <q-btn v-if="$q.platform.is.mobile" outline rounded style="font-size: 20px" href="/info" :label="$t('about.infoLink')" />
+          <q-btn v-if="$q.platform.is.mobile" outline rounded style="font-size: 20px" href="/info"
+            :label="$t('about.infoLink')" />
         </div>
       </div>
     </section>
@@ -160,16 +161,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.light {
-  background-color: #FFFFFF;
-  color: #000000;
-}
-
-.dark {
-  background-color: #000000;
-  color: #FFFFFF;
-}
-
 .custom-item {
   margin: 50px;
 }

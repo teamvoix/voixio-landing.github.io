@@ -32,8 +32,7 @@
     <section id="about">
       <div class="article-content">
         <div class="image-container" style="max-width: 600px; margin-bottom: 20px">
-          <img src="/images/quiz2.jpeg" :ratio="16 / 9"
-            style="border-radius: 10px; max-width: 100%; height: auto" />
+          <img src="/images/quiz2.jpeg" :ratio="16 / 9" style="border-radius: 10px; max-width: 100%; height: auto" />
         </div>
 
         <div class="text-container" style="max-width: 800px">
@@ -50,7 +49,7 @@
       <div class="row justify-center q-gutter-sm">
         <q-card flat bordered class="col-4 col-sm-3 col-md-2" v-for="n in 6">
           <q-card-section :class="`${theme} row items-center justify-center`">
-            <a :href="links[n-1]"><img :src="images[n-1]" style="height: 50px; width: 50px"/></a>
+            <a :href="links[n - 1]"><img :src="images[n - 1]" style="height: 50px; width: 50px" /></a>
           </q-card-section>
         </q-card>
       </div>
@@ -103,16 +102,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.light {
-  background-color: #FFFFFF;
-  color: #000000;
-}
-
-.dark {
-  background-color: #000000;
-  color: #FFFFFF;
-}
-
 .article-content {
   display: flex;
   flex-direction: row;

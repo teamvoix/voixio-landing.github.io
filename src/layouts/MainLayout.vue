@@ -159,4 +159,14 @@ export default defineComponent({
   background-color: #000000;
   color: #FFFFFF;
 }
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Garamond
+}
 </style>
