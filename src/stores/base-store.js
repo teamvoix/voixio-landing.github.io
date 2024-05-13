@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
 import { useI18n } from "vue-i18n";
+import { Cookies } from "quasar";
 
 export const useBaseStore = defineStore("base", {
   state: () => ({
@@ -22,26 +23,42 @@ export const useBaseStore = defineStore("base", {
       },
     ],
   }),
-  getters: {
+  getters: {},
+  actions: {
     getTheme() {
+      this.theme = Cookies.has("voix_page_theme")
+        ? Cookies.get("voix_page_theme")
+        : "light";
       return this.theme;
     },
-    getLinks() {
-      return this.links;
-    },
-  },
-  actions: {
+
     setTheme() {
-      if (this.theme == "light") {
-        this.theme = "dark";
+      if (Cookies.has("voix_page_theme")) {
+        const theme = Cookies.get("voix_page_theme");
+        if (theme == "light") {
+          Cookies.set("voix_page_theme", "dark", {
+            sameSite: "None",
+            secure: true,
+          });
+          this.theme = "dark";
+        } else {
+          Cookies.set("voix_page_theme", "light", {
+            sameSite: "None",
+            secure: true,
+          });
+          this.theme = "light";
+        }
       } else {
-        this.theme = "light";
+        Cookies.set("voix_page_theme", "dark", {
+          sameSite: "None",
+          secure: true,
+        });
+        this.theme = "dark";
       }
     },
-    updateLinks() {
+    getLinks() {
       const { t } = useI18n();
       this.links[0].title = t("nav.info");
-      console.log(` hehe ${this.links[0].title}`);
       return this.links;
     },
   },

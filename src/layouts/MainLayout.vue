@@ -124,9 +124,9 @@ export default defineComponent({
   setup() {
     const $q = useQuasar();
     const { locale } = useI18n({ useScope: "global" });
-    const theme = computed(() => baseStore.getTheme);
+    const theme = computed(() => baseStore.getTheme());
 
-    const linksList = computed(() => baseStore.updateLinks());
+    const linksList = computed(() => baseStore.getLinks());
 
     return {
       essentialLinks: linksList,
@@ -142,8 +142,8 @@ export default defineComponent({
   },
 
   methods: {
-    async setTheme() {
-      await baseStore.setTheme();
+    setTheme() {
+      baseStore.setTheme();
     }
   }
 });
