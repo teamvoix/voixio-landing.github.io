@@ -1,12 +1,12 @@
 <!-- eslint-disable vue/valid-v-for -->
 <!-- eslint-disable vue/require-v-for-key -->
-<template>
-  <q-page :class="theme">
+<template :class="theme">
+  <q-page>
     <!-- EXPERTISE -->
     <section id="about">
       <div class="article-content">
         <div class="image-container" style="max-width: 600px; margin-bottom: 20px">
-          <img src="/images/infoborder.jpg" :ratio="16 / 9"
+          <img src="/images/expertise.jpeg" :ratio="16 / 9"
             style="border-radius: 10px; max-width: 100%; height: auto" />
         </div>
 
@@ -32,7 +32,8 @@
     <section id="about">
       <div class="article-content">
         <div class="image-container" style="max-width: 600px; margin-bottom: 20px">
-          <img src="/images/quiz2.jpeg" :ratio="16 / 9" style="border-radius: 10px; max-width: 100%; height: auto" />
+          <img src="/images/mobiledevelopment.jpeg" :ratio="16 / 9"
+            style="border-radius: 10px; max-width: 100%; height: auto" />
         </div>
 
         <div class="text-container" style="max-width: 800px">
@@ -100,21 +101,3 @@ export default defineComponent({
   }
 });
 </script>
-
-<style scoped>
-.article-content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 40px;
-  margin: 10px;
-}
-
-.image-container,
-.text-container {
-  flex: 1 0 300px;
-}
-</style>

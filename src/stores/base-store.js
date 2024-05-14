@@ -12,6 +12,11 @@ export const useBaseStore = defineStore("base", {
         link: "/info",
       },
       {
+        title: "GE",
+        icon: "satellite",
+        link: "/ge",
+      },
+      {
         title: "+7 (727) 331 58 00",
         icon: "phone",
         link: "tel:+77273315800",
@@ -23,15 +28,15 @@ export const useBaseStore = defineStore("base", {
       },
     ],
   }),
-  getters: {},
-  actions: {
+  getters: {
     getTheme() {
       this.theme = Cookies.has("voix_page_theme")
         ? Cookies.get("voix_page_theme")
         : "light";
       return this.theme;
     },
-
+  },
+  actions: {
     setTheme() {
       if (Cookies.has("voix_page_theme")) {
         const theme = Cookies.get("voix_page_theme");

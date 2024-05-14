@@ -10,7 +10,9 @@
         </q-toolbar-title>
 
         <q-toolbar-title v-if="$q.platform.is.desktop">
-          <q-btn flat dense round :label="$t('nav.info')" href="/info" style="color: #ffffff; font-weight: bolder" />
+          <q-btn flat dense round :label="$t('nav.info')" href="/info"
+            style="color: #ffffff; font-weight: bolder; padding-inline: 40px" />
+          <q-btn flat dense round label="GE" href="/ge" style="color: #ffffff; font-weight: bolder" />
         </q-toolbar-title>
 
         <q-toolbar-title style="text-align: end; padding-right: 10px">
@@ -75,6 +77,7 @@
         <a href="https://go.2gis.com/m8u4qg" :class="theme">Kazakhstan, Almaty, 151 Minbayev st, office 35</a>
       </div><br />
     </div>
+    <br />
 
 
     <!-- TOOLBAR-FOR-DESKTOP -->
@@ -102,6 +105,7 @@
         </div>
       </div>
     </div>
+    <br />
   </q-layout>
 </template>
 
@@ -124,7 +128,7 @@ export default defineComponent({
   setup() {
     const $q = useQuasar();
     const { locale } = useI18n({ useScope: "global" });
-    const theme = computed(() => baseStore.getTheme());
+    const theme = computed(() => baseStore.getTheme);
 
     const linksList = computed(() => baseStore.getLinks());
 
@@ -160,8 +164,51 @@ export default defineComponent({
   color: #FFFFFF;
 }
 
+.article-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 40px;
+  margin: 10px;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 40px;
+  margin: 10px;
+}
+
+.body-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+  margin: 10px;
+}
+
+.custom-item {
+  margin: 50px;
+}
+
+.image-container,
+.text-container {
+  flex: 1 0 300px;
+}
+
 p,
 a,
+ul,
+li,
 h1,
 h2,
 h3,

@@ -1,10 +1,10 @@
-<template>
-  <q-page :class="theme">
+<template :class="theme">
+  <q-page>
     <!-- ABOUT -->
     <section id="about">
       <div class="article-content">
         <div class="image-container" style="max-width: 600px; margin-bottom: 20px">
-          <img src="/images/quiz2.jpeg" :ratio="16 / 9" style="border-radius: 10px; max-width: 100%; height: auto" />
+          <img src="/images/about.jpeg" :ratio="16 / 9" style="border-radius: 10px; max-width: 100%" />
         </div>
 
         <div class="text-container" style="max-width: 800px">
@@ -57,7 +57,7 @@
       <div class="q-md row d-flex justify-center" style="margin: auto; margin-top: 20px">
         <div class="q-md col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center" style="padding: 10px">
           <q-card dark class="my-card">
-            <q-img src="/images/quiz2.jpeg" :ratio="16 / 12" style="border-radius: 10px">
+            <q-img src="/images/feedback.jpeg" :ratio="16 / 12" style="border-radius: 10px">
               <div class="absolute-center" style="background: rgba(33, 33, 33, 0.8)">
                 <p style="font-size: large; font-weight: bold">
                   {{ $t("content.title") }}
@@ -159,25 +159,3 @@ export default defineComponent({
   }
 });
 </script>
-
-<style scoped>
-.custom-item {
-  margin: 50px;
-}
-
-.article-content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 40px;
-  margin: 10px;
-}
-
-.image-container,
-.text-container {
-  flex: 1 0 300px;
-}
-</style>
