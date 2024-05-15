@@ -55,6 +55,10 @@ export default {
     text: "We provide a full cycle of mobile application development: from the stage of business analysis to release, publication and support. We are ready to develop reliable and highly effective solutions that increase the productivity of your business thanks to the proposed set of application functions. We carry out the full range of work on the project, including: Business analysis, UI / UX design, Development of native or cross-platform applications, testing.",
   },
 
+  competency: {
+    title: "We use",
+  },
+
   ge: {
     header: "GE Smallworld Physical Network InventoryTM",
     title1: "The key to success in the market",

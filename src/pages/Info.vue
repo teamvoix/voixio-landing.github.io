@@ -5,7 +5,7 @@
     <!-- EXPERTISE -->
     <section id="about">
       <div class="article-content">
-        <div class="image-container" style="max-width: 600px; margin-bottom: 20px">
+        <div class="image-container" style="max-width: 600px; margin-bottom: 20px; margin-inline: 10px">
           <img src="/images/expertise.jpeg" :ratio="16 / 9"
             style="border-radius: 10px; max-width: 100%; height: auto" />
         </div>
@@ -31,7 +31,7 @@
     <!-- MOBILE-DEVELOPMENT -->
     <section id="about">
       <div class="article-content">
-        <div class="image-container" style="max-width: 600px; margin-bottom: 20px">
+        <div class="image-container" style="max-width: 600px; margin-bottom: 20px; margin-inline: 10px">
           <img src="/images/mobiledevelopment.jpeg" :ratio="16 / 9"
             style="border-radius: 10px; max-width: 100%; height: auto" />
         </div>
@@ -46,7 +46,7 @@
 
     <!-- COMPETENCY -->
     <section id="competency">
-      <h3 CLASS="text-center">Мы используем</h3>
+      <h3 CLASS="text-center">{{ $t('competency.title') }}</h3>
       <div class="row justify-center q-gutter-sm">
         <q-card flat bordered class="col-4 col-sm-3 col-md-2" v-for="n in 6">
           <q-card-section :class="`${theme} row items-center justify-center`">

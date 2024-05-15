@@ -24,7 +24,7 @@
           <q-btn flat>
 
             <q-list style="width: 80px">
-              <q-select dark v-model="locale" :options="localeOptions" dense borderless emit-value map-options
+              <q-select dark v-model="locale" :options="localeOptions" @update:locale="changeLanguage" dense borderless emit-value map-options
                 options-dense style="padding: 10px">
               </q-select>
             </q-list>
@@ -111,7 +111,7 @@
 
 <script>
 import { defineComponent, ref, computed } from "vue";
-import { useQuasar } from "quasar";
+import { useQuasar, Cookies } from "quasar";
 import { useI18n } from "vue-i18n";
 import EssentialLink from "components/EssentialLink.vue";
 
@@ -128,6 +128,7 @@ export default defineComponent({
   setup() {
     const $q = useQuasar();
     const { locale } = useI18n({ useScope: "global" });
+    const localeValue  = ref(Cookies.get('voixlanguage') || 'ru');
     const theme = computed(() => baseStore.getTheme);
 
     const linksList = computed(() => baseStore.getLinks());
@@ -135,6 +136,7 @@ export default defineComponent({
     return {
       essentialLinks: linksList,
       locale,
+      localeValue,
       localeOptions: [
         { value: "kz", label: "KZ" },
         { value: "ru", label: "RU" },
@@ -148,6 +150,12 @@ export default defineComponent({
   methods: {
     setTheme() {
       baseStore.setTheme();
+    },
+
+    changeLanguage() {
+      this.$i18n.locale = this.localeValue;
+      Cookies.set('voixlanguage', { sameSite: "None", secure: true }, this.localeValue);
+      this.locale = this.localeValue
     }
   }
 });

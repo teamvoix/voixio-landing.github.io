@@ -5,7 +5,7 @@
     <!-- HEADER -->
     <section id="about">
       <div :class="`${theme} header-content`"
-        style="background: radial-gradient(circle, #eac426 0%, #c932b4 100%); border-radius: 10px; margin-top: 25px; margin-bottom: 25px">
+        style="background: radial-gradient(circle, #e4b30d 0%, #dd4a00 100%); border-radius: 10px; margin-top: 25px; margin-bottom: 25px">
         <div class="text-container" style="max-width: 800px">
           <p style="font-size: 40px; margin-top: -20px">{{ $t('ge.header') }}</p>
         </div>
