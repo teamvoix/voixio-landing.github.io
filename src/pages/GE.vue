@@ -4,10 +4,10 @@
   <q-page>
     <!-- HEADER -->
     <section id="about">
-      <div :class="`${theme} header-content`"
-        style="background: radial-gradient(circle, #e4b30d 0%, #dd4a00 100%); border-radius: 10px; margin-top: 25px; margin-bottom: 25px">
+      <div :class="`header-content`"
+        style="background: radial-gradient(circle, #ff801c 0%, #dd4a00 100%); border-radius: 10px; margin-top: 25px; margin-bottom: 25px">
         <div class="text-container" style="max-width: 800px">
-          <p style="font-size: 40px; margin-top: -20px">{{ $t('ge.header') }}</p>
+          <p style="font-size: 40px; margin-top: -20px; color: #fff9f0">{{ $t('ge.header') }}</p>
         </div>
       </div>
     </section>

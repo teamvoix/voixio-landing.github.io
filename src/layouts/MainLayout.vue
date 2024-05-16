@@ -2,7 +2,7 @@
   <q-layout view="lHh Lpr lFf" :class="theme">
     <!-- HEADER -->
     <q-header elevated>
-      <q-toolbar style="background-color: #ff851b">
+      <q-toolbar style="background-color: #f06714">
         <q-btn flat dense round icon="menu" aria-label="Menu" style="color: #ffffff" @click="dialog = !dialog" />
 
         <q-toolbar-title>
@@ -24,7 +24,7 @@
           <q-btn flat>
 
             <q-list style="width: 80px">
-              <q-select dark v-model="locale" :options="localeOptions" @update:locale="changeLanguage" dense borderless emit-value map-options
+              <q-select dark v-model="locale" :options="localeOptions" dense borderless emit-value map-options
                 options-dense style="padding: 10px">
               </q-select>
             </q-list>
@@ -37,7 +37,7 @@
 
     <!-- DIALOG -->
     <q-dialog v-model="dialog" transition-show="rotate" transition-hide="rotate">
-      <q-card style="background: radial-gradient(circle, #ffc67d 0%, #ffc67d 100%); color: #000000">
+      <q-card style="background: radial-gradient(circle, #ffa270 0%, #fc8c50 100%); color: #000000">
         <div class="q-pa-md text-center">
 
           <q-list>
@@ -128,7 +128,7 @@ export default defineComponent({
   setup() {
     const $q = useQuasar();
     const { locale } = useI18n({ useScope: "global" });
-    const localeValue  = ref(Cookies.get('voixlanguage') || 'ru');
+    const localeValue = ref(Cookies.get('voix_language') || 'ru');
     const theme = computed(() => baseStore.getTheme);
 
     const linksList = computed(() => baseStore.getLinks());
@@ -147,16 +147,18 @@ export default defineComponent({
     };
   },
 
+  watch: {
+    locale(newLocale) {
+      this.$i18n.locale = newLocale;
+      Cookies.set('voix_language', newLocale, { sameSite: "None", secure: true });
+      this.locale = newLocale;
+    }
+  },
+
   methods: {
     setTheme() {
       baseStore.setTheme();
     },
-
-    changeLanguage() {
-      this.$i18n.locale = this.localeValue;
-      Cookies.set('voixlanguage', { sameSite: "None", secure: true }, this.localeValue);
-      this.locale = this.localeValue
-    }
   }
 });
 </script>

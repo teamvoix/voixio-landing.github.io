@@ -3,7 +3,7 @@
     <!-- ABOUT -->
     <section id="about">
       <div class="article-content">
-        <div class="image-container" style="max-width: 600px; margin-bottom: 20px">
+        <div class="image-container" style="max-width: 600px; margin-bottom: 20px; margin-inline: 10px">
           <img src="/images/about.jpeg" :ratio="16 / 9" style="border-radius: 10px; max-width: 100%" />
         </div>
 
@@ -77,7 +77,7 @@
 
     <!-- ENROLL-DIALOG -->
     <q-dialog v-model="enrollDialog">
-      <q-card style="background-color: #ffc67d">
+      <q-card style="background: radial-gradient(circle, #f9af86 0%, #f8a06f 100%)">
         <div class="text-center">
 
           <q-card-section style="font-size: 30px">
