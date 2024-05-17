@@ -9,12 +9,12 @@ export const useBaseStore = defineStore("base", {
       {
         title: "",
         icon: "rocket",
-        link: "/info",
+        link: "/voix.github.io/info",
       },
       {
         title: "",
         icon: "satellite",
-        link: "/ge",
+        link: "/voix.github.io/ge",
       },
       {
         title: "+7 (727) 331 58 00",

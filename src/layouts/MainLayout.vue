@@ -10,9 +10,10 @@
         </q-toolbar-title>
 
         <q-toolbar-title v-if="$q.platform.is.desktop">
-          <q-btn flat dense round :label="$t('nav.info')" href="/info"
+          <q-btn flat dense round :label="$t('nav.info')" href="/voix.github.io/info"
             style="color: #ffffff; font-weight: bolder; padding-inline: 40px" />
-          <q-btn flat dense round :label="$t('nav.ge')" href="/ge" style="color: #ffffff; font-weight: bolder" />
+          <q-btn flat dense round :label="$t('nav.ge')" href="/voix.github.io/ge"
+            style="color: #ffffff; font-weight: bolder" />
         </q-toolbar-title>
 
         <q-toolbar-title style="text-align: end; padding-right: 10px">

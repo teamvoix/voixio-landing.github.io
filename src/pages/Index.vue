@@ -4,13 +4,14 @@
     <section id="about">
       <div class="article-content">
         <div class="image-container" style="max-width: 600px; margin-bottom: 20px; margin-inline: 10px">
-          <img src="images/about.jpeg" alt="Фоновое изображение" :ratio="16 / 9" style="border-radius: 10px; max-width: 100%" />
+          <img src="images/about.jpeg" alt="Фоновое изображение" :ratio="16 / 9"
+            style="border-radius: 10px; max-width: 100%" />
         </div>
 
         <div class="text-container" style="max-width: 800px">
           <p style="font-size: 40px; margin-top: 10px">{{ $t('about.title') }}</p>
           <p style="font-size: 23px">{{ $t('about.text') }}</p>
-          <q-btn v-if="$q.platform.is.mobile" outline rounded style="font-size: 20px" href="/info"
+          <q-btn v-if="$q.platform.is.mobile" outline rounded style="font-size: 20px" href="/voix.github.io/info"
             :label="$t('about.infoLink')" />
         </div>
       </div>
