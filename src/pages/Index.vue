@@ -4,7 +4,7 @@
     <section id="about">
       <div class="article-content">
         <div class="image-container" style="max-width: 600px; margin-bottom: 20px; margin-inline: 10px">
-          <img src="/images/about.jpeg" alt="Фоновое изображение" :ratio="16 / 9" style="border-radius: 10px; max-width: 100%" />
+          <img src="images/about.jpeg" alt="Фоновое изображение" :ratio="16 / 9" style="border-radius: 10px; max-width: 100%" />
         </div>
 
         <div class="text-container" style="max-width: 800px">
@@ -57,7 +57,7 @@
       <div class="q-md row d-flex justify-center" style="margin: auto; margin-top: 20px">
         <div class="q-md col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center" style="padding: 10px">
           <q-card dark class="my-card">
-            <q-img src="/images/feedback.jpeg" alt="Фоновое изображение" :ratio="16 / 12" style="border-radius: 10px">
+            <q-img src="images/feedback.jpeg" alt="Фоновое изображение" :ratio="16 / 12" style="border-radius: 10px">
               <div class="absolute-center" style="background: rgba(33, 33, 33, 0.8)">
                 <p style="font-size: large; font-weight: bold">
                   {{ $t("content.title") }}

@@ -6,7 +6,7 @@
     <section id="about">
       <div class="article-content">
         <div class="image-container" style="max-width: 600px; margin-bottom: 20px; margin-inline: 10px">
-          <img src="/images/expertise.jpeg" alt="Фоновое изображение" :ratio="16 / 9"
+          <img src="images/expertise.jpeg" alt="Фоновое изображение" :ratio="16 / 9"
             style="border-radius: 10px; max-width: 100%; height: auto" />
         </div>
 
@@ -32,7 +32,7 @@
     <section id="about">
       <div class="article-content">
         <div class="image-container" style="max-width: 600px; margin-bottom: 20px; margin-inline: 10px">
-          <img src="/images/mobiledevelopment.jpeg" alt="Фоновое изображение" :ratio="16 / 9"
+          <img src="images/mobiledevelopment.jpeg" alt="Фоновое изображение" :ratio="16 / 9"
             style="border-radius: 10px; max-width: 100%; height: auto" />
         </div>
 
