@@ -67,7 +67,7 @@ module.exports = configure(function (/* ctx */) {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-      publicPath: '/voixio-landing.github.io',
+      publicPath: '/voix.github.io',
       // analyze: true,
       // env: {},
       // rawDefine: {}
