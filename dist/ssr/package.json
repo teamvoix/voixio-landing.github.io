@@ -1,0 +1,30 @@
+{
+  "name": "voixio",
+  "version": "0.0.1",
+  "description": "Voix LLC",
+  "author": "Voix LLC",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "1.6.8",
+    "vue-i18n": "9.13.1",
+    "pinia": "2.1.7",
+    "@quasar/extras": "1.16.11",
+    "quasar": "2.15.4",
+    "vue": "3.4.26",
+    "vue-router": "4.3.2",
+    "compression": "^1.7.4",
+    "express": "^4.17.3",
+    "serialize-javascript": "^6.0.0"
+  },
+  "engines": {
+    "node": "^18 || ^16 || ^14.19",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  },
+  "quasar": {
+    "ssr": true
+  }
+}
