@@ -1,23 +1,9 @@
 <template>
-  <div class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center">
+  <div class="fullscreen text-white text-center q-pa-md flex flex-center" style="background-color: #f06714">
     <div>
-      <div style="font-size: 30vh">
-        404
-      </div>
-
-      <div class="text-h2" style="opacity:.4">
-        Oops. Nothing here...
-      </div>
-
-      <q-btn
-        class="q-mt-xl"
-        color="white"
-        text-color="blue"
-        unelevated
-        to="/"
-        label="Go Home"
-        no-caps
-      />
+      <div style="font-size: 30vh">404</div>
+      <div class="text-h2" style="opacity:.4">{{ $t("notFound.text") }}</div>
+      <q-btn class="q-mt-xl" color="black" text-color="white" unelevated to="/" :label="$t('notFound.homepage')" no-caps />
     </div>
   </div>
 </template>

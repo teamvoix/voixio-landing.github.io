@@ -12,7 +12,7 @@
         <q-toolbar-title v-if="$q.platform.is.desktop">
           <q-btn flat dense round :label="$t('nav.info')" href="/info"
             style="color: #ffffff; font-weight: bolder; padding-inline: 40px" />
-          <q-btn flat dense round label="GE" href="/ge" style="color: #ffffff; font-weight: bolder" />
+          <q-btn flat dense round :label="$t('nav.ge')" href="/ge" style="color: #ffffff; font-weight: bolder" />
         </q-toolbar-title>
 
         <q-toolbar-title style="text-align: end; padding-right: 10px">
@@ -37,7 +37,7 @@
 
     <!-- DIALOG -->
     <q-dialog v-model="dialog" transition-show="rotate" transition-hide="rotate">
-      <q-card style="background: radial-gradient(circle, #ffa270 0%, #fc8c50 100%); color: #000000">
+      <q-card style="background: radial-gradient(circle, #ff9d67 0%, #fa9760 100%); color: #000000">
         <div class="q-pa-md text-center">
 
           <q-list>
@@ -111,12 +111,22 @@
 
 <script>
 import { defineComponent, ref, computed } from "vue";
-import { useQuasar, Cookies } from "quasar";
+import { useQuasar, useMeta, Cookies } from "quasar";
 import { useI18n } from "vue-i18n";
 import EssentialLink from "components/EssentialLink.vue";
 
 import { useBaseStore } from "src/stores/base-store.js";
 const baseStore = useBaseStore();
+
+const metaData = {
+  title: 'Voix LLC - Разработка ПО любого уровня сложности на заказ',
+
+  meta: {
+    description: { name: 'description', content: 'Полный комплекс услуг по разработке программного обеспечения любого уровня сложности на заказ. Оптимальные бизнес и технологические решения, удовлетворяющие вашим требованиям и заявленному бюджету.' },
+    keywords: { name: 'keywords', content: 'Разработка ПО, Разработка Программного обеспечния, Разработка Сайтов, Разработка Web-приложений, ГИС, Интеграция' },
+    equiv: { 'http-equiv': 'Content-Type', content: 'text/html; charset=UTF-8' },
+  },
+}
 
 export default defineComponent({
   name: "MainLayout",
@@ -130,8 +140,9 @@ export default defineComponent({
     const { locale } = useI18n({ useScope: "global" });
     const localeValue = ref(Cookies.get('voix_language') || 'ru');
     const theme = computed(() => baseStore.getTheme);
-
     const linksList = computed(() => baseStore.getLinks());
+
+    useMeta(metaData)
 
     return {
       essentialLinks: linksList,

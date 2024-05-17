@@ -12,7 +12,7 @@ export const useBaseStore = defineStore("base", {
         link: "/info",
       },
       {
-        title: "GE",
+        title: "",
         icon: "satellite",
         link: "/ge",
       },
@@ -64,6 +64,7 @@ export const useBaseStore = defineStore("base", {
     getLinks() {
       const { t } = useI18n();
       this.links[0].title = t("nav.info");
+      this.links[1].title = t("nav.ge");
       return this.links;
     },
   },

@@ -16,7 +16,7 @@
     <section id="about">
       <div :class="`${theme} body-content`">
         <div style="max-width: 600px; margin-bottom: 20px">
-          <img src="/images/ge1.jpg" :ratio="16 / 9" style="border-radius: 10px; max-width: 100%; height: auto" />
+          <img src="/images/ge1.jpg" alt="Фоновое изображение" :ratio="16 / 9" style="border-radius: 10px; max-width: 100%; height: auto" />
         </div>
 
 
@@ -31,7 +31,7 @@
         </div>
 
         <div style="max-width: 600px; margin-bottom: 20px">
-          <img src="/images/ge2.png" :ratio="16 / 9" style="border-radius: 10px; max-width: 100%; height: auto" />
+          <img src="/images/ge2.png" alt="Фоновое изображение" :ratio="16 / 9" style="border-radius: 10px; max-width: 100%; height: auto" />
         </div>
 
         <div class="text-container" style="max-width: 800px">

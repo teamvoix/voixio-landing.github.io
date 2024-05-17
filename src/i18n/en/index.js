@@ -1,6 +1,7 @@
 export default {
   nav: {
-    info: "Directions",
+    info: "Software development",
+    ge: "GE Solutions",
     close: "Close",
   },
 
@@ -60,7 +61,7 @@ export default {
   },
 
   ge: {
-    header: "GE Smallworld Physical Network InventoryTM",
+    header: "GE Smallworld Physical Network Inventory ™",
     title1: "The key to success in the market",
     text1p1:
       "Today, telecommunications companies are increasingly realizing that the mere fact of providing complex and interconnected services is not sufficient for business success. The defining condition is the ability to provide services efficiently, at the lowest cost and with the best quality. Creating optimal business processes and effectively managing them requires a consolidated view of the entire operator's network.",
@@ -85,5 +86,10 @@ export default {
     li5: "Reduce network downtime by quickly and accurately detecting network faults.",
     li6: "Reduce troubleshooting time by quickly and accurately identifying the location of cable breaks and faulty equipment.",
     li7: "Customer satisfaction with processing their requests for new services and reducing network downtime increases significantly.",
+  },
+
+  notFound: {
+    text: "The page is not existing",
+    homepage: "Go home"
   },
 };

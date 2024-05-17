@@ -1,9 +1,9 @@
 {
   "name": "voixio",
   "version": "0.0.1",
-  "description": "Voix",
-  "productName": "Voix",
-  "author": "Voix",
+  "description": "Voix LLC",
+  "productName": "Voix LLC",
+  "author": "Voix LLC",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",
