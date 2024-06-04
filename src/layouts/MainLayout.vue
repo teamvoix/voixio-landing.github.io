@@ -2,7 +2,7 @@
   <q-layout view="lHh Lpr lFf" :class="theme">
     <!-- HEADER -->
     <q-header elevated>
-      <q-toolbar style="background-color: #f06714">
+      <q-toolbar style="background-color: #e96228">
         <q-btn flat dense round icon="menu" aria-label="Menu" style="color: #ffffff" @click="dialog = !dialog" />
 
         <q-toolbar-title>

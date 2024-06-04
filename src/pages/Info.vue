@@ -20,7 +20,7 @@
     <!-- SOFTWARE-DEVELOPMENT -->
     <section id="about">
       <div :class="`article-content`"
-        style="background: radial-gradient(circle, #ff801c 0%, #dd4a00 100%); border-radius: 10px">
+        style="background: radial-gradient(circle, #e96228 0%, #dd4a00 100%); border-radius: 10px">
         <div class="text-container" style="max-width: 800px; color: #fff9f0">
           <p style="font-size: 40px; margin-top: 10px">{{ $t('softwareDevelopment.title') }}</p>
           <p style="font-size: 23px">{{ $t('softwareDevelopment.text') }}</p>

@@ -5,7 +5,7 @@
     <!-- HEADER -->
     <section id="about">
       <div :class="`header-content`"
-        style="background: radial-gradient(circle, #ff801c 0%, #dd4a00 100%); border-radius: 10px; margin-top: 25px; margin-bottom: 25px">
+        style="background: radial-gradient(circle, #e96228 0%, #dd4a00 100%); border-radius: 10px; margin-top: 25px; margin-bottom: 25px">
         <div class="text-container" style="max-width: 800px">
           <p style="font-size: 40px; margin-top: -20px; color: #fff9f0">{{ $t('ge.header') }}</p>
         </div>
@@ -16,7 +16,8 @@
     <section id="about">
       <div :class="`${theme} body-content`">
         <div style="max-width: 600px; margin-bottom: 20px">
-          <img src="images/ge1.jpg" alt="Фоновое изображение" :ratio="16 / 9" style="border-radius: 10px; max-width: 100%; height: auto" />
+          <img src="images/ge1.jpg" alt="Фоновое изображение" :ratio="16 / 9"
+            style="border-radius: 10px; max-width: 100%; height: auto" />
         </div>
 
 
@@ -31,7 +32,8 @@
         </div>
 
         <div style="max-width: 600px; margin-bottom: 20px">
-          <img src="images/ge2.png" alt="Фоновое изображение" :ratio="16 / 9" style="border-radius: 10px; max-width: 100%; height: auto" />
+          <img src="images/ge2.png" alt="Фоновое изображение" :ratio="16 / 9"
+            style="border-radius: 10px; max-width: 100%; height: auto" />
         </div>
 
         <div class="text-container" style="max-width: 800px">
