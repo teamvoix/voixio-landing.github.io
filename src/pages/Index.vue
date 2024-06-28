@@ -1,104 +1,32 @@
 <template :class="theme">
   <q-page>
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="article-content">
-        <div class="image-container" style="max-width: 600px; margin-bottom: 20px; margin-inline: 10px">
-          <img src="images/about.jpeg" alt="Фоновое изображение" :ratio="16 / 9"
-            style="border-radius: 10px; max-width: 100%" />
-        </div>
-
-        <div class="text-container" style="max-width: 800px">
-          <p style="font-size: 40px; margin-top: 10px">{{ $t('about.title') }}</p>
-          <p style="font-size: 23px">{{ $t('about.text') }}</p>
-          <q-btn v-if="$q.platform.is.mobile" outline rounded style="font-size: 20px" href="/#/info"
-            :label="$t('about.infoLink')" />
-        </div>
-      </div>
-    </section>
-
-
-    <!-- LIST -->
-    <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center">
-      <div class="custom-item text-center">
-        <q-avatar size="200px" icon="dvr" />
-        <p style="font-size: 30px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">
-          {{ $t("list.title1") }}
-        </p>
-        <p style="font-size: 20px; white-space: pre-line">
-          {{ $t("list.text1") }}
-        </p>
-      </div>
-
-      <div class="custom-item text-center">
-        <q-avatar size="200px" icon="public" />
-        <p style="font-size: 30px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">
-          {{ $t("list.title2") }}
-        </p>
-        <p style="font-size: 20px; white-space: pre-line">
-          {{ $t("list.text2") }}
-        </p>
-      </div>
-
-      <div class="custom-item text-center">
-        <q-avatar size="200px" icon="web" />
-        <p style="font-size: 30px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">
-          {{ $t("list.title3") }}
-        </p>
-        <p style="font-size: 20px; white-space: pre-line">
-          {{ $t("list.text3") }}
-        </p>
-      </div>
+    <!-- NAVIGATION -->
+    <div class="q-md text-center" style="margin-top: 40px">
+      <q-btn :label="$t('nav.homepage')" size="large" @click="sectionChoice = 'homepage'"
+        :color="(sectionChoice == 'homepage') ? 'secondary' : 'primary'" text-color="white"
+        style="padding-inline: 20px; margin-inline: 10px" dense />
+      <q-btn :label="$t('nav.info')" size="large" @click="sectionChoice = 'info'"
+        :color="(sectionChoice == 'info') ? 'secondary' : 'primary'" text-color="white"
+        style="padding-inline: 20px; margin-inline: 10px" dense />
+      <q-btn :label="$t('nav.ge')" size="large" @click="sectionChoice = 'ge'"
+        :color="(sectionChoice == 'ge') ? 'secondary' : 'primary'" text-color="white"
+        style="padding-inline: 20px; margin-inline: 10px" dense />
     </div>
-    <hr style="margin: 40px; margin-top: 0px" />
 
-
-    <!-- CONTENT -->
-    <section id="content">
-      <div class="q-md row d-flex justify-center" style="margin: auto; margin-top: 20px">
-        <div class="q-md col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center" style="padding: 10px">
-          <q-card dark class="my-card">
-            <q-img src="images/feedback.jpeg" alt="Фоновое изображение" :ratio="16 / 12" style="border-radius: 10px">
-              <div class="absolute-center" style="background: rgba(33, 33, 33, 0.8)">
-                <p style="font-size: large; font-weight: bold">
-                  {{ $t("content.title") }}
-                </p>
-                <p style="font-size: large">{{ $t("content.text") }}</p>
-
-                <p style="font-size: medium; font-weight: bold; text-shadow: 1px rgb(35, 35, 35)">
-                  <q-btn outline rounded color="white" @click="enrollDialog = true" :label="$t('content.show')" />
-                </p>
-              </div>
-            </q-img>
-          </q-card>
-        </div>
-      </div>
+    <!-- HOMEPAGE -->
+    <section v-show="sectionChoice == 'homepage'" id="homepage">
+      <Homepage />
     </section>
 
+    <!-- INFO -->
+    <section v-show="sectionChoice == 'info'" id="info">
+      <Info />
+    </section>
 
-    <!-- ENROLL-DIALOG -->
-    <q-dialog v-model="enrollDialog">
-      <q-card style="background: radial-gradient(circle, #ff9d67 0%, #fa9760 100%)">
-        <div class="text-center">
-
-          <q-card-section style="font-size: 30px">
-            {{ $t("dialog.title") }}
-          </q-card-section>
-
-          <div class="q-pa-md row items-start q-gutter-md">
-            <q-form @submit="submitForm" class="q-gutter-md" style="max-width: 600px; margin: 0 auto">
-
-              <q-input v-model="name" square filled type="text" :label="$t('dialog.name')" outlined />
-              <q-input v-model="phone" square filled type="tel" :label="$t('dialog.phone')" outlined />
-              <q-input v-model="text" square filled type="textarea" :label="$t('dialog.text')" outlined />
-
-              <q-btn type="submit" :label="$t('dialog.button')" size="large" class="q-mt-md"
-                style="background-color: #000000; color: #ffffff" dense flat />
-            </q-form>
-          </div>
-        </div>
-      </q-card>
-    </q-dialog>
+    <!-- GE -->
+    <section v-show="sectionChoice == 'ge'" id="ge">
+      <GE />
+    </section>
   </q-page>
 </template>
 
@@ -109,6 +37,11 @@ import { useQuasar, Notify } from "quasar";
 import { useBaseStore } from "src/stores/base-store.js";
 const baseStore = useBaseStore();
 
+import Homepage from 'components/Homepage.vue'
+import Info from 'components/Info.vue'
+import GE from 'components/GE.vue'
+
+
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Index",
@@ -118,45 +51,15 @@ export default defineComponent({
     const theme = computed(() => baseStore.getTheme)
 
     return {
-      slide: ref(1),
-      autoplay: ref(true),
-      isFullHeight: ref(),
-
-      enrollDialog: ref(false),
-      name: ref(''),
-      phone: ref(''),
-      text: ref(''),
-
       theme: theme,
+      sectionChoice: ref('homepage'),
     };
   },
 
-  methods: {
-    async submitForm() {
-      try {
-        if (this.name == '' || this.phone == '' || this.text == '') {
-          await Notify.create({ message: this.$t('dialog.empty'), position: "center" })
-          return;
-        }
-
-        const botToken = '6409688318:AAF-CjpBJuT2exP2oZQ7r4cUHyR6orIaiD0';
-        const chatId = '@voixfeedbacks';
-        const text = `Пользователь ${this.name} с номером ${this.phone} оставил заявку. Текст: ${this.text}.`
-
-        await this.$api.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-          chat_id: chatId,
-          text: text,
-        });
-
-        this.name = '';
-        this.phone = '';
-        this.text = '';
-        await Notify.create({ message: this.$t('dialog.sent'), position: "center" })
-      } catch (error) {
-        Notify.create({ message: `${error.message}`, position: "center" })
-        throw error;
-      }
-    },
-  }
+  components: {
+    Homepage,
+    Info,
+    GE,
+  },
 });
 </script>

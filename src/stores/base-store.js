@@ -7,16 +7,6 @@ export const useBaseStore = defineStore("base", {
     theme: "light",
     links: [
       {
-        title: "",
-        icon: "rocket",
-        link: "/#/info",
-      },
-      {
-        title: "",
-        icon: "satellite",
-        link: "/#/ge",
-      },
-      {
         title: "+7 (727) 331 58 00",
         icon: "phone",
         link: "tel:+77273315800",
@@ -25,6 +15,11 @@ export const useBaseStore = defineStore("base", {
         title: "team@voix.io",
         icon: "mail",
         link: "mailto:team@voix.io",
+      },
+      {
+        title: "Almaty, 151 Minbayev st, office 35",
+        icon: "location_on",
+        link: "https://go.2gis.com/m8u4qg",
       },
     ],
   }),
@@ -62,9 +57,6 @@ export const useBaseStore = defineStore("base", {
       }
     },
     getLinks() {
-      const { t } = useI18n();
-      this.links[0].title = t("nav.info");
-      this.links[1].title = t("nav.ge");
       return this.links;
     },
   },

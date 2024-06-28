@@ -3,16 +3,10 @@
     <!-- HEADER -->
     <q-header elevated>
       <q-toolbar style="background-color: #e96228">
-        <q-btn flat dense round icon="menu" aria-label="Menu" style="color: #ffffff" @click="dialog = !dialog" />
+        <q-btn flat dense round :icon="(dialog == true) ? 'close' : 'menu'" aria-label="Menu" style="color: #ffffff" @click="dialog = !dialog" />
 
         <q-toolbar-title>
           <a href="/"><img src="images/logodark.png" height="50" style="padding-top: 8px" /></a>
-        </q-toolbar-title>
-
-        <q-toolbar-title v-if="$q.platform.is.desktop">
-          <q-btn flat dense round :label="$t('nav.info')" href="/#/info"
-            style="color: #ffffff; font-weight: bolder; padding-inline: 40px" />
-          <q-btn flat dense round :label="$t('nav.ge')" href="/#/ge" style="color: #ffffff; font-weight: bolder" />
         </q-toolbar-title>
 
         <q-toolbar-title style="text-align: end; padding-right: 10px">
@@ -41,7 +35,15 @@
         <div class="q-pa-md text-center">
 
           <q-list>
-            <EssentialLink v-for="link in essentialLinks" :key="link.title" v-bind="link" />
+            <q-item v-for="link in essentialLinks" :key="link.title" v-bind="link" clickable :href="link.link">
+              <q-item-section v-if="link.icon" avatar>
+                <q-icon style="color: #000000" :name="link.icon" />
+              </q-item-section>
+
+              <q-item-section style="color: #000000">
+                <q-item-label>{{ link.title }}</q-item-label>
+              </q-item-section>
+            </q-item>
           </q-list>
 
           <q-btn flat outline :label="$t('nav.close')" v-close-popup />
@@ -113,7 +115,6 @@
 import { defineComponent, ref, computed } from "vue";
 import { useQuasar, useMeta, Cookies } from "quasar";
 import { useI18n } from "vue-i18n";
-import EssentialLink from "components/EssentialLink.vue";
 
 import { useBaseStore } from "src/stores/base-store.js";
 const baseStore = useBaseStore();
@@ -130,10 +131,6 @@ const metaData = {
 
 export default defineComponent({
   name: "MainLayout",
-
-  components: {
-    EssentialLink,
-  },
 
   setup() {
     const $q = useQuasar();
@@ -192,8 +189,9 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 40px;
-  margin: 10px;
+  padding-top: 20px;
+  padding-bottom: 12px;
+  margin: 20px;
 }
 
 .header-content {
@@ -203,8 +201,8 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 40px;
-  margin: 10px;
+  padding-top: 30px;
+  margin: 20px;
 }
 
 .body-content {

@@ -1,5 +1,6 @@
 export default {
   nav: {
+    homepage: "About us",
     info: "Software development",
     ge: "GE Solutions",
     close: "Close",
@@ -14,12 +15,15 @@ export default {
 
   list: {
     header: "Our solutions",
+    icon1: "dvr",
     title1: "Web-applications",
     text1:
       "Development of web applications \nof any complexity level for medium and \nlarge companies, which includes \na full cycle: business analytics, \ndesign, development, implementation, \ntesting, maintenance and \nsupport",
+    icon2: "public",
     title2: "ГИС",
     text2:
       "A system for providing information \non the geographical, spatial location \nand accounting of objects of \ntelecommunications networks, engineering \ninfrastructure, as well as cadastral \ninformation on a cartographic basis",
+    icon3: "web",
     title3: "Интеграция",
     text3:
       "Business process integration module \nfor the movement of outfits \nand information web services",
