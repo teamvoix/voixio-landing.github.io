@@ -194,6 +194,14 @@ export default defineComponent({
   margin: 20px;
 }
 
+.about-image-desktop {
+  display: flex;
+}
+
+.about-text-desktop {
+ flex: 1;
+}
+
 .header-content {
   display: flex;
   flex-direction: row;

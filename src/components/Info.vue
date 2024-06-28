@@ -4,15 +4,15 @@
   <q-page>
     <!-- EXPERTISE -->
     <section id="about">
-      <div class="article-content" style="padding-top: 20px; display: flex">
-        <div class="image-container" style="max-width: 600px; margin-bottom: 20px; margin-inline: 40px">
+      <div :class="`article-content ${aboutImageDesktop}`" style="padding-top: 20px">
+        <div :class="`image-container ${aboutImageDesktop}`" style="max-width: 600px; margin-bottom: 20px; margin-inline: 40px">
           <img src="images/expertise.jpg" alt="Фоновое изображение" :ratio="16 / 9"
             style="border-radius: 10px; max-width: 100%; height: auto" />
         </div>
 
-        <div class="text-container" style="flex: 1; max-width: 800px">
+        <div class="text-container" style="max-width: 800px">
           <p style="font-size: 40px">{{ $t('expertise.title') }}</p>
-          <p style="font-size: 23px">{{ $t('expertise.text') }}</p>
+          <p :class="`text-container ${aboutTextDesktop}`" style="font-size: 23px">{{ $t('expertise.text') }}</p>
         </div>
       </div>
     </section>
@@ -76,7 +76,17 @@ export default defineComponent({
 
     return {
       theme: theme,
+
+      aboutImageDesktop: ref(''),
+      aboutTextDesktop: ref(''),
     };
+  },
+
+  created() {
+    if (this.$q.platform.is.desktop) {
+      this.aboutImageDesktop = 'about-image-desktop'
+      this.aboutTextDesktop = 'about-image-desktop'
+    }
   },
 
   data() {
