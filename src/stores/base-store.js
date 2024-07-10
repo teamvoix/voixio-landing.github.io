@@ -22,6 +22,26 @@ export const useBaseStore = defineStore("base", {
         link: "https://go.2gis.com/m8u4qg",
       },
     ],
+    icons: [
+      {
+        icon: "scale",
+      },
+      {
+        icon: "table_rows",
+      },
+      {
+        icon: "view_timeline",
+      },
+      {
+        icon: "hourglass_top",
+      },
+      {
+        icon: "payments",
+      },
+      {
+        icon: "public",
+      },
+    ],
   }),
   getters: {
     getTheme() {
@@ -30,6 +50,9 @@ export const useBaseStore = defineStore("base", {
         : "light";
       return this.theme;
     },
+    getIcons() {
+      return this.icons
+    }
   },
   actions: {
     setTheme() {

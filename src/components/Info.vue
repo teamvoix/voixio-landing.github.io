@@ -4,13 +4,13 @@
   <q-page>
     <!-- EXPERTISE -->
     <section id="about">
-      <div :class="`article-content ${aboutImageDesktop}`" style="padding-top: 20px">
+      <div :class="`body-content ${aboutImageDesktop}`" style="padding-top: 20px">
         <div :class="`image-container ${aboutImageDesktop}`" style="max-width: 600px; margin-bottom: 20px; margin-inline: 40px">
           <img src="images/expertise.jpg" alt="Фоновое изображение" :ratio="16 / 9"
             style="border-radius: 10px; max-width: 100%; height: auto" />
         </div>
 
-        <div class="text-container" style="max-width: 800px">
+        <div class="text-container" style="max-width: 800px; white-space: pre-wrap">
           <p style="font-size: 40px">{{ $t('expertise.title') }}</p>
           <p :class="`text-container ${aboutTextDesktop}`" style="font-size: 23px">{{ $t('expertise.text') }}</p>
         </div>
@@ -19,7 +19,7 @@
 
     <!-- SOFTWARE-DEVELOPMENT -->
     <section id="about">
-      <div :class="`article-content`"
+      <div :class="`body-content`"
         style="background: radial-gradient(circle, #e96228 0%, #dd4a00 100%); border-radius: 10px">
         <div class="text-container" style="max-width: 800px; color: #fff9f0">
           <p style="font-size: 40px">{{ $t('softwareDevelopment.title') }}</p>
@@ -30,14 +30,14 @@
 
     <!-- MOBILE-DEVELOPMENT -->
     <section id="about">
-      <div class="article-content">
-        <div class="image-container" style="max-width: 600px; margin-top: 20px; margin-inline: 40px">
+      <div class="body-content">
+        <div class="image-container" style="max-width: 600px; margin-top: 20px; margin-bottom: 20px; margin-inline: 40px">
           <img src="images/mobiledevelopment.jpg" alt="Фоновое изображение" :ratio="16 / 9"
             style="border-radius: 10px; max-width: 100%; height: auto" />
         </div>
 
-        <div class="text-container" style="max-width: 800px">
-          <p style="font-size: 40px">{{ $t('mobileDevelopment.title') }}</p>
+        <div class="text-container" style="max-width: 800px; white-space: pre-wrap">
+          <p style="font-size: 40px; margin-bottom: 20px">{{ $t('mobileDevelopment.title') }}</p>
           <p style="font-size: 23px">{{ $t('mobileDevelopment.text') }}</p>
         </div>
       </div>

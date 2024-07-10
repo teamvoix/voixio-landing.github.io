@@ -2,23 +2,26 @@
   <q-layout view="lHh Lpr lFf" :class="theme">
     <!-- HEADER -->
     <q-header elevated>
-      <q-toolbar style="background-color: #e96228">
-        <q-btn flat dense round :icon="(dialog == true) ? 'close' : 'menu'" aria-label="Menu" style="color: #ffffff" @click="dialog = !dialog" />
+      <q-toolbar :class="theme">
+        <q-btn flat dense round :icon="(dialog == true) ? 'close' : 'menu'" aria-label="Menu" @click="dialog = !dialog" />
 
         <q-toolbar-title>
-          <a href="/"><img src="images/logodark.png" height="50" style="padding-top: 8px" /></a>
+          <a href="/">
+            <img v-if="theme == 'light'" src="images/logolight.png" height="50" style="padding-top: 8px" />
+            <img v-else src="images/logodark.png" height="50" style="padding-top: 8px" />
+          </a>
         </q-toolbar-title>
 
-        <q-toolbar-title style="text-align: end; padding-right: 10px">
+        <q-toolbar-title :class="theme" style="text-align: end; padding-right: 10px">
           <q-btn @click="setTheme()" flat>
-            <q-icon v-if="theme == 'light'" name="light_mode" color="white" />
-            <q-icon v-else name="nightlight_round" color="white" />
+            <q-icon v-if="theme == 'light'" name="light_mode" />
+            <q-icon v-else name="nightlight_round" />
           </q-btn>
 
           <q-btn flat>
 
             <q-list style="width: 80px">
-              <q-select dark v-model="locale" :options="localeOptions" dense borderless emit-value map-options
+              <q-select :dark="theme == 'dark'" v-model="locale" :options="localeOptions" dense borderless emit-value map-options
                 options-dense style="padding: 10px">
               </q-select>
             </q-list>
@@ -182,7 +185,7 @@ export default defineComponent({
   color: #FFFFFF;
 }
 
-.article-content {
+.body-content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -225,6 +228,8 @@ export default defineComponent({
 
 .custom-item {
   margin: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .image-container,
