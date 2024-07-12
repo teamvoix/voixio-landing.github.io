@@ -58,7 +58,7 @@ export default defineComponent({
   setup() {
     const $q = useQuasar();
     const theme = computed(() => baseStore.getTheme)
-    const icons = baseStore.getIcons
+    const icons = baseStore.getIconsGE
 
     return {
       theme,

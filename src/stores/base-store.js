@@ -22,7 +22,18 @@ export const useBaseStore = defineStore("base", {
         link: "https://go.2gis.com/m8u4qg",
       },
     ],
-    icons: [
+    iconsInfo: [
+      {
+        icon: "preview",
+      },
+      {
+        icon: "how_to_reg",
+      },
+      {
+        icon: "build_circle",
+      },
+    ],
+    iconsGE: [
       {
         icon: "scale",
       },
@@ -50,8 +61,21 @@ export const useBaseStore = defineStore("base", {
         : "light";
       return this.theme;
     },
-    getIcons() {
-      return this.icons
+    getAltTheme() {
+      this.theme = Cookies.has("voix_page_theme")
+        ? Cookies.get("voix_page_theme")
+        : "light";
+      if (this.theme == 'light') {
+        return "dark"
+      } else {
+        return "light"
+      }
+    },
+    getIconsInfo() {
+      return this.iconsInfo
+    },
+    getIconsGE() {
+      return this.iconsGE
     }
   },
   actions: {

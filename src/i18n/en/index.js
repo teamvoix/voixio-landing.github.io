@@ -47,18 +47,29 @@ export default {
 
   expertise: {
     title: "Our expertise",
-    text: "Our company has accumulated extensive expertise in the field of telecommunications and significant experience in the field of software development for telecommunications companies. Our development team has extensive experience in automating business and technological processes for telecom operators. Our employees have more than 15 years of experience in the development and implementation of IT products for various tasks and industries!",
+    text: "Our company has accumulated extensive expertise in the field of telecommunications. The development team has extensive experience in automating business and technological processes for telecom operators and implementing IT products for various tasks and industries!",
   },
 
   softwareDevelopment: {
     title: "Custom Software Development",
-    text: "We try to ensure maximum transparency of the entire development process for the Customer. Our team has experience working with IT projects of various levels of complexity in a variety of areas: telecommunications and communications, sports, gas distribution networks and more.",
+    text1: "Maximum transparency \n of the entire development \n process for the customer",
+    text2: "Experience working \n with IT projects of any \n level of complexity in a \n variety of directions",
+    text3: "Creation of both \n small websites and software \n for large industrial \n enterprises.",
   },
 
   mobileDevelopment: {
-    title: "Mobile application development",
-    text: "We provide a full cycle of mobile application development: from the stage of business analysis to release, publication and support. \n\n We are ready to develop reliable and highly effective solutions that increase the productivity of your business thanks to the proposed set of application functions. \n\n We carry out the full range of work on the project, including: Business analysis, UI / UX design, Development of native or cross-platform applications, testing.",
-  },
+    title: "Mobile Application Development",
+    text1: "We are ready to develop reliable and highly effective solutions that increase the productivity of your business thanks to the proposed set of application functions.",
+
+    text2: "We carry out the full scope of work on the project",
+    chip1: "Business analysis",
+    chip2: "UI/UX design",
+    chip3: "Development",
+    chip4: "Cross-platform clients",
+    chip5: "Native clients",
+    chip6: "Testing",
+    chip7: "Support",
+    },
 
   competency: {
     title: "We use",

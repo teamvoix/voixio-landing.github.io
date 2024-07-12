@@ -12,21 +12,20 @@
           </a>
         </q-toolbar-title>
 
-        <q-toolbar-title :class="theme" style="text-align: end; padding-right: 10px">
+        <q-toolbar-title :class="theme" style="text-align: end; margin-inline: 20px">
           <q-btn @click="setTheme()" flat>
             <q-icon v-if="theme == 'light'" name="light_mode" />
             <q-icon v-else name="nightlight_round" />
           </q-btn>
 
           <q-btn flat>
-
-            <q-list style="width: 80px">
+            <q-list style="width: 70px">
               <q-select :dark="theme == 'dark'" v-model="locale" :options="localeOptions" dense borderless emit-value map-options
                 options-dense style="padding: 10px">
               </q-select>
             </q-list>
-
           </q-btn>
+
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
@@ -183,6 +182,14 @@ export default defineComponent({
 .dark {
   background-color: #000000;
   color: #FFFFFF;
+}
+
+.mobile {
+  font-size: 16px;
+}
+
+.desktop {
+  font-size: 20px;
 }
 
 .body-content {

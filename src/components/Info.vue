@@ -5,7 +5,7 @@
     <!-- EXPERTISE -->
     <section id="about">
       <div :class="`body-content ${aboutImageDesktop}`" style="padding-top: 20px">
-        <div :class="`image-container ${aboutImageDesktop}`" style="max-width: 600px; margin-bottom: 20px; margin-inline: 40px">
+        <div :class="`${aboutImageDesktop}`" style="max-width: 600px; margin-bottom: 20px; margin-inline: 40px">
           <img src="images/expertise.jpg" alt="Фоновое изображение" :ratio="16 / 9"
             style="border-radius: 10px; max-width: 100%; height: auto" />
         </div>
@@ -19,26 +19,44 @@
 
     <!-- SOFTWARE-DEVELOPMENT -->
     <section id="about">
-      <div :class="`body-content`"
-        style="background: radial-gradient(circle, #e96228 0%, #dd4a00 100%); border-radius: 10px">
-        <div class="text-container" style="max-width: 800px; color: #fff9f0">
-          <p style="font-size: 40px">{{ $t('softwareDevelopment.title') }}</p>
-          <p style="font-size: 23px">{{ $t('softwareDevelopment.text') }}</p>
+      <hr style="margin-inline: 100px; margin-top: 50px" />
+      <div class="body-content">
+
+        <div style="max-width: 800px">
+          <p style="font-size: 34px; font-weight: bolder; margin-top: 0px">{{ $t('softwareDevelopment.title') }}</p>
         </div>
+
+        <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center; white-space: pre-wrap">
+          <div v-for="n, index in icons" class="custom-item text-center">
+            <q-avatar size="70px" :icon="n.icon" />
+            <p style="font-size: 20px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">
+              {{ $t(`softwareDevelopment.text${index+1}`) }}
+            </p>
+          </div>
+        </div>
+
       </div>
+      <hr style="margin-inline: 100px; margin-bottom: 50px" />
     </section>
 
     <!-- MOBILE-DEVELOPMENT -->
     <section id="about">
       <div class="body-content">
-        <div class="image-container" style="max-width: 600px; margin-top: 20px; margin-bottom: 20px; margin-inline: 40px">
+        <div style="max-width: 600px; margin-top: 20px; margin-bottom: 20px; margin-inline: 40px">
           <img src="images/mobiledevelopment.jpg" alt="Фоновое изображение" :ratio="16 / 9"
             style="border-radius: 10px; max-width: 100%; height: auto" />
         </div>
 
         <div class="text-container" style="max-width: 800px; white-space: pre-wrap">
-          <p style="font-size: 40px; margin-bottom: 20px">{{ $t('mobileDevelopment.title') }}</p>
-          <p style="font-size: 23px">{{ $t('mobileDevelopment.text') }}</p>
+          <p style="font-size: 40px; margin-top: 10px; margin-bottom: 30px">{{ $t('mobileDevelopment.title') }}</p>
+          <p style="font-size: 21px">{{ $t('mobileDevelopment.text1') }}</p>
+
+          <div style="margin-top: 30px; margin-bottom: 20px">
+            <p style="font-size: 23px; font-weight: bolder">{{ $t('mobileDevelopment.text2') }}</p>
+            <q-chip v-for="n in 7" square :ripple="false" :class="`${altTheme} ${deviceType}`">
+              {{ $t(`mobileDevelopment.chip${n}`) }}
+            </q-chip>
+          </div>
         </div>
       </div>
     </section>
@@ -46,7 +64,7 @@
 
     <!-- COMPETENCY -->
     <section id="competency">
-      <h3 CLASS="text-center">{{ $t('competency.title') }}</h3>
+      <h3 class="text-center">{{ $t('competency.title') }}</h3>
       <div class="row justify-center q-gutter-sm">
         <q-card flat bordered class="col-4 col-sm-3 col-md-2" style="border: 2px solid grey; margin: 20px" v-for="n in 6">
           <q-card-section :class="`${theme} row items-center justify-center`">
@@ -73,9 +91,15 @@ export default defineComponent({
   setup() {
     const $q = useQuasar();
     const theme = computed(() => baseStore.getTheme)
+    const altTheme = computed(() => baseStore.getAltTheme)
+    const deviceType = $q.platform.is.desktop ? "desktop" : "mobile";
+    const icons = baseStore.getIconsInfo
 
     return {
-      theme: theme,
+      theme,
+      altTheme,
+      deviceType,
+      icons,
 
       aboutImageDesktop: ref(''),
       aboutTextDesktop: ref(''),
