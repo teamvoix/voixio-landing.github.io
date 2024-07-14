@@ -3,7 +3,8 @@
     <!-- HEADER -->
     <q-header elevated>
       <q-toolbar :class="theme">
-        <q-btn flat dense round :icon="(dialog == true) ? 'close' : 'menu'" aria-label="Menu" @click="dialog = !dialog" />
+        <q-btn flat dense round :icon="(dialog == true) ? 'close' : 'menu'" aria-label="Menu"
+          @click="dialog = !dialog" />
 
         <q-toolbar-title>
           <a href="/">
@@ -20,8 +21,8 @@
 
           <q-btn flat>
             <q-list style="width: 70px">
-              <q-select :dark="theme == 'dark'" v-model="locale" :options="localeOptions" dense borderless emit-value map-options
-                options-dense style="padding: 10px">
+              <q-select :dark="theme == 'dark'" v-model="locale" :options="localeOptions" dense borderless emit-value
+                map-options options-dense style="padding: 10px">
               </q-select>
             </q-list>
           </q-btn>
@@ -107,7 +108,7 @@
           <q-icon name="location_on" size="24px" /><br />
           <a href="https://go.2gis.com/m8u4qg" :class="theme">Kazakhstan, Almaty, 151 Minbayev st, office 35</a>
         </div>
-      </div>
+      </div><br /><br />
     </div>
     <br />
   </q-layout>
@@ -209,7 +210,7 @@ export default defineComponent({
 }
 
 .about-text-desktop {
- flex: 1;
+  flex: 1;
 }
 
 .header-content {
