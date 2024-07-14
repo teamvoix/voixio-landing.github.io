@@ -3,7 +3,7 @@
     <!-- ABOUT -->
     <section id="about">
       <div :class="`body-content ${aboutImageDesktop}`" style="padding-top: 20px">
-        <div :class="`${aboutImageDesktop}`" style="max-width: 800px; margin-bottom: 20px; margin-inline: 10px">
+        <div :class="`${aboutImageDesktop}`" style="max-width: 600px; margin-bottom: 20px; margin-inline: 10px">
           <img src="images/about.jpg" alt="Фоновое изображение" :ratio="16 / 9"
             style="border-radius: 10px; max-width: 100%" />
         </div>

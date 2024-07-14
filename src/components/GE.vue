@@ -13,7 +13,8 @@
 
         <div class="text-container" style="max-width: 800px">
           <p style="font-size: 40px; margin-top: 10px">{{ $t('ge.title1') }}</p>
-          <p style="font-size: 23px; margin-top: 25px; margin-bottom: 50px" v-for="n in 3" :key="n">{{ $t(`ge.text1p${n}`) }}</p><br />
+          <p style="font-size: 23px; margin-top: 25px; margin-bottom: 50px" v-for="n in 3" :key="n">{{
+        $t(`ge.text1p${n}`) }}</p><br />
         </div>
       </div>
     </section>
@@ -33,7 +34,7 @@
           <div v-for="n, index in icons" :key="n" class="custom-item text-center">
             <q-avatar size="70px" :icon="n.icon" />
             <p style="font-size: 20px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">
-              {{ $t(`ge.li${index+1}`) }}
+              {{ $t(`ge.li${index + 1}`) }}
             </p>
           </div>
         </div>
