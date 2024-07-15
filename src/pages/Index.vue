@@ -1,18 +1,5 @@
 <template :class="theme">
   <q-page>
-    <!-- NAVIGATION -->
-    <div class="q-md text-center" style="margin-top: 20px">
-      <q-btn :label="$t('nav.homepage')" size="large" class="q-mt-md" @click="sectionChoice = 'homepage'"
-        :color="(sectionChoice == 'homepage') ? 'secondary' : 'primary'" text-color="white"
-        style="padding-inline: 20px; margin-inline: 10px" dense />
-      <q-btn :label="$t('nav.info')" size="large" class="q-mt-md" @click="sectionChoice = 'info'"
-        :color="(sectionChoice == 'info') ? 'secondary' : 'primary'" text-color="white"
-        style="padding-inline: 20px; margin-inline: 10px" dense />
-      <q-btn :label="$t('nav.ge')" size="large" class="q-mt-md" @click="sectionChoice = 'ge'"
-        :color="(sectionChoice == 'ge') ? 'secondary' : 'primary'" text-color="white"
-        style="padding-inline: 20px; margin-inline: 10px" dense />
-    </div>
-
     <!-- HOMEPAGE -->
     <section v-show="sectionChoice == 'homepage'" id="homepage">
       <Homepage />
@@ -49,10 +36,11 @@ export default defineComponent({
   setup() {
     const $q = useQuasar()
     const theme = computed(() => baseStore.getTheme)
+    const sectionChoice = computed(() => baseStore.getSectionChoice)
 
     return {
       theme: theme,
-      sectionChoice: ref('homepage'),
+      sectionChoice,
     };
   },
 

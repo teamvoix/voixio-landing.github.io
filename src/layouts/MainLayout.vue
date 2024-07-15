@@ -13,6 +13,15 @@
           </a>
         </q-toolbar-title>
 
+        <q-toolbar-title v-if="$q.platform.is.desktop">
+          <q-btn :label="$t('nav.homepage')" size="large" @click="setSectionChoice('homepage')"
+            style="padding-inline: 20px; margin-inline: 10px" dense flat />
+          <q-btn :label="$t('nav.info')" size="large" @click="setSectionChoice('info')"
+            style="padding-inline: 20px; margin-inline: 10px" dense flat />
+          <q-btn :label="$t('nav.ge')" size="large" @click="setSectionChoice('ge')"
+            style="padding-inline: 20px; margin-inline: 10px" dense flat />
+        </q-toolbar-title>
+
         <q-toolbar-title :class="theme" style="text-align: end; margin-inline: 20px">
           <q-btn @click="setTheme()" flat>
             <q-icon v-if="theme == 'light'" name="light_mode" />
@@ -34,16 +43,28 @@
 
     <!-- DIALOG -->
     <q-dialog v-model="dialog" transition-show="rotate" transition-hide="rotate">
-      <q-card style="background: radial-gradient(circle, #ff9d67 0%, #fa9760 100%); color: #000000">
+      <q-card :class="theme">
         <div class="q-pa-md text-center">
 
           <q-list>
-            <q-item v-for="link in essentialLinks" :key="link.title" v-bind="link" clickable :href="link.link">
+            <!-- ACTION-LINKS -->
+            <q-item v-for="link in menuLinks" :key="link.label" v-bind="link" clickable @click="setSectionChoice(link.label)">
               <q-item-section v-if="link.icon" avatar>
-                <q-icon style="color: #000000" :name="link.icon" />
+                <q-icon :name="link.icon" />
               </q-item-section>
 
-              <q-item-section style="color: #000000">
+              <q-item-section>
+                <q-item-label>{{ $t(link.link) }}</q-item-label>
+              </q-item-section>
+            </q-item>
+
+            <!-- CONTACT-LINKS -->
+            <q-item v-for="link in essentialLinks" :key="link.title" v-bind="link" clickable :href="link.link">
+              <q-item-section v-if="link.icon" avatar>
+                <q-icon :name="link.icon" />
+              </q-item-section>
+
+              <q-item-section>
                 <q-item-label>{{ link.title }}</q-item-label>
               </q-item-section>
             </q-item>
@@ -139,7 +160,10 @@ export default defineComponent({
     const $q = useQuasar();
     const { locale } = useI18n({ useScope: "global" });
     const localeValue = ref(Cookies.get('voix_language') || 'ru');
+
     const theme = computed(() => baseStore.getTheme);
+    const sectionChoice = computed(() => baseStore.getSectionChoice)
+    const menuLinks = baseStore.getMenuLinks;
     const linksList = computed(() => baseStore.getLinks());
 
     useMeta(metaData)
@@ -153,7 +177,10 @@ export default defineComponent({
         { value: "ru", label: "RU" },
         { value: "en-US", label: "EN" },
       ],
+
       theme,
+      sectionChoice,
+      menuLinks,
       dialog: ref(false),
     };
   },
@@ -169,6 +196,10 @@ export default defineComponent({
   methods: {
     setTheme() {
       baseStore.setTheme();
+    },
+
+    setSectionChoice(sc) {
+      baseStore.setSectionChoice(sc);
     },
   }
 });

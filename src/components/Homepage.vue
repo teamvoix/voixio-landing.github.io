@@ -56,7 +56,7 @@
 
     <!-- ENROLL-DIALOG -->
     <q-dialog v-model="enrollDialog">
-      <q-card style="background: radial-gradient(circle, #ff9d67 0%, #fa9760 100%)">
+      <q-card :class="theme">
         <div class="text-center">
 
           <q-card-section style="font-size: 30px">

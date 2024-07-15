@@ -8,8 +8,8 @@ export default {
 
   about: {
     title: "About us",
-    text: `Our company provides a full range of custom software development services. We will help you find the optimal business and technological solutions that best meet your requirements and stated budget.
-    We have extensive experience in the development and implementation of enterprise software, mobile solutions, as well as in integration tasks for automating business and technological processes of campaigns`,
+    text: `Our Kazakhstani company has been providing a full range of custom development services for more than 10 years.
+    We have extensive experience in the design and implementation of enterprise software, mobile solutions, as well as in integration tasks for automating business and technological processes of companies`,
     infoLink: "Directions",
   },
 
@@ -47,7 +47,7 @@ export default {
 
   expertise: {
     title: "Our expertise",
-    text: "Our company has accumulated extensive expertise in the field of telecommunications. The development team has extensive experience in automating business and technological processes for telecom operators and implementing IT products for various tasks and industries!",
+    text: "Our company has accumulated extensive expertise in the field of information technology. The development team has extensive experience in automating business and technological processes for telecom operators and implementing IT products for various tasks and industries!",
   },
 
   softwareDevelopment: {

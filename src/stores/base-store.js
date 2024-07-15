@@ -22,6 +22,23 @@ export const useBaseStore = defineStore("base", {
         link: "https://go.2gis.com/m8u4qg",
       },
     ],
+    menuLinks: [
+      {
+        label: "homepage",
+        link: "nav.homepage",
+        icon: "home",
+      },
+      {
+        label: "info",
+        link: "nav.info",
+        icon: "info",
+      },
+      {
+        label: "ge",
+        link: "nav.ge",
+        icon: "view_timeline",
+      },
+    ],
     iconsInfo: [
       {
         icon: "preview",
@@ -53,6 +70,7 @@ export const useBaseStore = defineStore("base", {
         icon: "public",
       },
     ],
+    sectionChoice: "homepage",
   }),
   getters: {
     getTheme() {
@@ -71,12 +89,18 @@ export const useBaseStore = defineStore("base", {
         return "light"
       }
     },
+    getMenuLinks() {
+      return this.menuLinks
+    },
     getIconsInfo() {
       return this.iconsInfo
     },
     getIconsGE() {
       return this.iconsGE
-    }
+    },
+    getSectionChoice() {
+      return this.sectionChoice
+    },
   },
   actions: {
     setTheme() {
@@ -105,6 +129,9 @@ export const useBaseStore = defineStore("base", {
     },
     getLinks() {
       return this.links;
+    },
+    setSectionChoice(sectionChoice) {
+      this.sectionChoice =  sectionChoice
     },
   },
 });
