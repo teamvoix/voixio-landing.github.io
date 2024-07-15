@@ -8,8 +8,8 @@ export default {
 
   about: {
     title: "About us",
-    text: `Our Kazakhstani company has been providing a full range of custom development services for more than 10 years.
-    We have extensive experience in the design and implementation of enterprise software, mobile solutions, as well as in integration tasks for automating business and technological processes of companies`,
+    text: `We are a Kazakhstani IT company. We have been developing software solutions for more than 10 years.
+    During this time, we have accumulated extensive experience in the design and implementation of enterprise software, mobile solutions, as well as in integration tasks for automating business and technological processes of companies.`,
     infoLink: "Directions",
   },
 
