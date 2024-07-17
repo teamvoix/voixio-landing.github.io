@@ -8,8 +8,8 @@
 
         <q-toolbar-title>
           <a href="/">
-            <img v-if="theme == 'light'" src="images/logolight.png" height="50" style="padding-top: 8px" />
-            <img v-else src="images/logodark.png" height="50" style="padding-top: 8px" />
+            <img v-if="theme == 'light'" src="images/logolebedev.png" height="40" style="padding-top: 8px" />
+            <img v-else src="images/darklebedev.png" height="40" style="padding-top: 8px" />
           </a>
         </q-toolbar-title>
 
@@ -85,10 +85,10 @@
     <!-- TOOLBAR-FOR-MOBILE -->
     <div v-if="$q.platform.is.mobile" :class="`text-center ${theme}`">
       <div v-if="theme == 'light'" style="margin: 10px">
-        <img src="images/logolight.png" height="50" style="padding-top: 8px" /><br />
+        <img src="images/logolebedev.png" height="40" style="padding-top: 8px" /><br />
       </div>
       <div v-else style="margin: 10px">
-        <img src="images/logodark.png" height="50" style="padding-top: 8px" /><br />
+        <img src="images/darklebedev.png" height="40" style="padding-top: 8px" /><br />
       </div>
       <div style="font-size: 16px; margin: 10px">
         <q-icon name="mail" size="24px" /><br />
@@ -112,10 +112,10 @@
       <br />
       <div class="row justify-around" style="height: 70px">
         <div v-if="theme == 'light'" class="col-12 col-md-1">
-          <img src="images/logolight.png" height="50" style="padding-top: 8px" /><br />
+          <img src="images/logolebedev.png" height="40" style="padding-top: 8px" /><br />
         </div>
         <div v-else class="col-12 col-md-1">
-          <img src="images/logodark.png" height="50" style="padding-top: 8px" /><br />
+          <img src="images/darklebedev.png" height="40" style="padding-top: 8px" /><br />
         </div>
         <div class="col-12 col-md-1">
           <q-icon name="mail" size="24px" /><br />
@@ -199,7 +199,9 @@ export default defineComponent({
     },
 
     setSectionChoice(sc) {
-      baseStore.setSectionChoice(sc);
+      baseStore.setSectionChoice(sc)
+      setTimeout(10000)
+      this.dialog = false
     },
   }
 });
@@ -212,7 +214,7 @@ export default defineComponent({
 }
 
 .dark {
-  background-color: #000000;
+  background-color: #1e1e1e;
   color: #FFFFFF;
 }
 
@@ -286,5 +288,25 @@ h3,
 h4,
 h5 {
   font-family: Garamond
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }
 </style>

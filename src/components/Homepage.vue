@@ -66,9 +66,9 @@
           <div class="q-pa-md row items-start q-gutter-md">
             <q-form @submit="submitForm" class="q-gutter-md" style="max-width: 600px; margin: 0 auto">
 
-              <q-input v-model="name" square filled type="text" :label="$t('dialog.name')" outlined />
-              <q-input v-model="phone" square filled type="tel" :label="$t('dialog.phone')" outlined />
-              <q-input v-model="text" square filled type="textarea" :label="$t('dialog.text')" outlined />
+              <q-input v-model="name" :label-color="(theme=='light') ? 'black' : 'white'" square filled type="text" :label="$t('dialog.name')" outlined />
+              <q-input v-model="phone" :label-color="(theme=='light') ? 'black' : 'white'" square filled type="tel" :label="$t('dialog.phone')" outlined />
+              <q-input v-model="text" :label-color="(theme=='light') ? 'black' : 'white'" square filled type="textarea" :label="$t('dialog.text')" outlined />
 
               <q-btn type="submit" :label="$t('dialog.button')" size="large" class="q-mt-md"
                 style="background-color: #000000; color: #ffffff" dense flat />

@@ -67,8 +67,10 @@
       <h3 class="text-center">{{ $t('competency.title') }}</h3>
       <div class="row justify-center q-gutter-sm">
         <q-card flat bordered class="col-4 col-sm-3 col-md-2" style="border: 2px solid grey; margin: 20px" v-for="n in 6">
-          <q-card-section :class="`${theme} row items-center justify-center`">
-            <a :href="links[n - 1]"><img :src="images[n - 1]" style="height: 50px; width: 50px" /></a>
+          <q-card-section :class="`${theme} text-center row items-center justify-center`" style="padding-bottom: 0px">
+            <a :href="links[n - 1]"><img :src="images[n - 1]" style="height: 50px; width: 50px" />
+              <p :class="theme">{{ names[n-1] }}</p>
+            </a>
           </q-card-section>
         </q-card>
       </div>
@@ -130,7 +132,15 @@ export default defineComponent({
         'images/react.svg',
         'images/posgresql.svg',
         'images/java.svg',
-      ]
+      ],
+      names: [
+        'NodeJS',
+        'Quasar',
+        'Golang',
+        'ReactJS',
+        'PostgreSQL',
+        'Java',
+      ],
     }
   }
 });
