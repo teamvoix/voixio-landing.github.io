@@ -15,11 +15,11 @@
 
         <q-toolbar-title v-if="$q.platform.is.desktop">
           <q-btn :label="$t('nav.homepage')" size="large" @click="setSectionChoice('homepage')"
-            style="padding-inline: 20px; margin-inline: 10px" dense flat />
+            style="margin-inline: 10px" dense flat />
           <q-btn :label="$t('nav.info')" size="large" @click="setSectionChoice('info')"
-            style="padding-inline: 20px; margin-inline: 10px" dense flat />
+            style="margin-inline: 10px" dense flat />
           <q-btn :label="$t('nav.ge')" size="large" @click="setSectionChoice('ge')"
-            style="padding-inline: 20px; margin-inline: 10px" dense flat />
+            style="margin-inline: 10px" dense flat />
         </q-toolbar-title>
 
         <q-toolbar-title :class="theme" style="text-align: end; margin-inline: 20px">

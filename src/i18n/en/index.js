@@ -50,16 +50,15 @@ export default {
     text: "Our company has accumulated extensive expertise in the field of information technology. The development team has extensive experience in automating business and technological processes for telecom operators and implementing IT products for various tasks and industries!",
   },
 
-  softwareDevelopment: {
-    title: "Custom Software Development",
+  features: {
     text1: "Maximum transparency \n of the entire development \n process for the customer",
     text2: "Experience working \n with IT projects of any \n level of complexity in a \n variety of directions",
-    text3: "Creation of both \n small websites and software \n for large industrial \n enterprises.",
+    text3: "Development of mobile applications, meeting all modern requirements",
   },
 
-  mobileDevelopment: {
-    title: "Mobile Application Development",
-    text1: "We are ready to develop reliable and highly effective solutions that increase the productivity of your business thanks to the proposed set of application functions.",
+  softwareDevelopment: {
+    title: "Software Development",
+    text1: "We create both small websites and software for large industrial enterprises. We develop reliable and highly effective solutions that increase the productivity of your business.",
 
     text2: "We carry out the full scope of work on the project",
     chip1: "Business analysis",

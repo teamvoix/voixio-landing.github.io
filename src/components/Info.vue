@@ -17,20 +17,16 @@
       </div>
     </section>
 
-    <!-- SOFTWARE-DEVELOPMENT -->
-    <section id="about">
+    <!-- FEATURES -->
+    <section id="about" style="margin-bottom: 50px">
       <hr style="margin-inline: 100px; margin-top: 50px" />
       <div class="body-content">
-
-        <div style="max-width: 800px">
-          <p style="font-size: 34px; font-weight: bolder; margin-top: 0px">{{ $t('softwareDevelopment.title') }}</p>
-        </div>
 
         <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center; white-space: pre-wrap">
           <div v-for="n, index in icons" class="custom-item text-center">
             <q-avatar size="70px" :icon="n.icon" />
             <p style="font-size: 20px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">
-              {{ $t(`softwareDevelopment.text${index+1}`) }}
+              {{ $t(`features.text${index+1}`) }}
             </p>
           </div>
         </div>
@@ -39,22 +35,22 @@
       <hr style="margin-inline: 100px; margin-bottom: 50px" />
     </section>
 
-    <!-- MOBILE-DEVELOPMENT -->
+    <!-- SOFTWARE-DEVELOPMENT -->
     <section id="about">
       <div class="body-content">
         <div style="max-width: 600px; margin-top: 20px; margin-bottom: 20px; margin-inline: 40px">
-          <img src="images/mobiledevelopment.jpg" alt="Фоновое изображение" :ratio="16 / 9"
+          <img src="images/softwareDevelopment.jpg" alt="Фоновое изображение" :ratio="16 / 9"
             style="border-radius: 10px; max-width: 100%; height: auto" />
         </div>
 
         <div class="text-container" style="max-width: 800px; white-space: pre-wrap">
-          <p style="font-size: 40px; margin-top: 10px; margin-bottom: 30px">{{ $t('mobileDevelopment.title') }}</p>
-          <p style="font-size: 21px">{{ $t('mobileDevelopment.text1') }}</p>
+          <p style="font-size: 40px; margin-top: 10px; margin-bottom: 30px">{{ $t('softwareDevelopment.title') }}</p>
+          <p style="font-size: 21px">{{ $t('softwareDevelopment.text1') }}</p>
 
-          <div style="margin-top: 30px; margin-bottom: 20px">
-            <p style="font-size: 23px; font-weight: bolder">{{ $t('mobileDevelopment.text2') }}</p>
+          <div style="margin-top: 50px; margin-bottom: 20px">
+            <p style="font-size: 23px; font-weight: bolder">{{ $t('softwareDevelopment.text2') }}</p>
             <q-chip v-for="n in 7" square :ripple="false" :class="`${altTheme} ${deviceType}`">
-              {{ $t(`mobileDevelopment.chip${n}`) }}
+              {{ $t(`softwareDevelopment.chip${n}`) }}
             </q-chip>
           </div>
         </div>
