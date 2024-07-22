@@ -233,7 +233,7 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 12px;
   margin: 20px;
 }
