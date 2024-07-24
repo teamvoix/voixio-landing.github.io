@@ -17,18 +17,21 @@
 
 
     <!-- LIST -->
-    <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center">
-      <div class="custom-item text-center" v-for="n in 3" :key="n">
-        <q-avatar size="170px" :icon="$t(`list.icon${n}`)" />
-        <p style="font-size: 30px; font-weight: bold; margin-top: 0px; margin-bottom: 20px">
-          {{ $t(`list.title${n}`) }}
-        </p>
-        <p style="font-size: 20px; white-space: pre-line">
-          {{ $t(`list.text${n}`) }}
-        </p>
+    <section id="list">
+      <hr style="margin-inline: 100px; margin-top: 40px" />
+      <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center">
+        <div class="custom-item text-center" v-for="n in 3" :key="n">
+          <q-avatar size="170px" :icon="$t(`list.icon${n}`)" />
+          <p style="font-size: 30px; font-weight: bold; margin-top: 0px; margin-bottom: 20px">
+            {{ $t(`list.title${n}`) }}
+          </p>
+          <p style="font-size: 20px; white-space: pre-line">
+            {{ $t(`list.text${n}`) }}
+          </p>
+        </div>
       </div>
-    </div>
-    <hr style="margin: 80px; margin-top: 0px" />
+      <hr style="margin-inline: 100px; margin-bottom: 100px" />
+    </section>
 
 
     <!-- ENROLL -->

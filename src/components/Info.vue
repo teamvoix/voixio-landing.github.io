@@ -19,7 +19,7 @@
 
     <!-- FEATURES -->
     <section id="about" style="margin-bottom: 50px">
-      <hr style="margin-inline: 100px; margin-top: 50px" />
+      <hr style="margin-inline: 100px; margin-top: 40px" />
       <div class="body-content">
 
         <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center; white-space: pre-wrap">
@@ -47,7 +47,7 @@
           <p style="font-size: 40px; margin-top: 10px; margin-bottom: 30px">{{ $t('softwareDevelopment.title') }}</p>
           <p style="font-size: 21px">{{ $t('softwareDevelopment.text1') }}</p>
 
-          <div style="margin-top: 50px; margin-bottom: 20px">
+          <div style="margin-top: 80px; margin-bottom: 20px">
             <p style="font-size: 23px; font-weight: bolder">{{ $t('softwareDevelopment.text2') }}</p>
             <q-chip v-for="n in 7" square :ripple="false" :class="`${altTheme} ${deviceType}`">
               {{ $t(`softwareDevelopment.chip${n}`) }}
