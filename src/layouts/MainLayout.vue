@@ -22,18 +22,19 @@
             style="margin-inline: 10px" dense flat />
         </q-toolbar-title>
 
-        <q-toolbar-title :class="theme" style="text-align: end; margin-inline: 20px">
-          <q-btn @click="setTheme()" flat>
-            <q-icon v-if="theme == 'light'" name="light_mode" />
-            <q-icon v-else name="nightlight_round" />
-          </q-btn>
+        <q-toolbar-title :class="theme" style="text-align: end; margin-inline: -50px; margin-right: 20px">
 
-          <q-btn flat>
-            <q-list style="width: 70px">
+          <q-btn flat style="margin-inline: 0px; padding-inline: 0px">
+            <q-list style="width: 70px;">
               <q-select :dark="theme == 'dark'" v-model="locale" :options="localeOptions" dense borderless emit-value
                 map-options options-dense style="padding: 10px">
               </q-select>
             </q-list>
+          </q-btn>
+
+          <q-btn @click="setTheme()" flat>
+            <q-icon v-if="theme == 'light'" name="light_mode" />
+            <q-icon v-else name="nightlight_round" />
           </q-btn>
 
         </q-toolbar-title>
@@ -240,7 +241,7 @@ export default defineComponent({
 
 .image-desktop {
   display: flex;
-  max-height: 300px;
+  max-height: 400px;
 }
 
 .about-text-desktop {

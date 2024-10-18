@@ -7,7 +7,7 @@
       <div :class="`${theme} body-content`">
         <div style="max-width: 600px; margin-bottom: 20px">
           <img src="images/ge1.jpg" alt="Фоновое изображение" :ratio="16 / 9"
-          :class="`${imageDesktop}`" style="border-radius: 10px; max-width: 100%; height: auto" />
+          :class="`${imageDesktop}`" style="border-radius: 10px; max-width: 100%" />
         </div>
 
 
@@ -23,7 +23,7 @@
     <section id="about">
       <div class="body-content">
         <div style="max-width: 700px; margin-bottom: 50px">
-          <img src="images/ge2.png" :ratio="16 / 9" style="border-radius: 10px; max-width: 100%; height: auto" />
+          <img src="images/ge2.png" :ratio="16 / 9" style="border-radius: 10px; max-width: 100%" />
         </div>
 
         <div style="max-width: 800px">
