@@ -5,7 +5,7 @@
       <div :class="`body-content ${aboutImageDesktop}`" style="padding-top: 40px">
         <div :class="`${aboutImageDesktop}`" style="max-width: 600px; margin-bottom: 30px; margin-inline: 10px">
           <img src="images/about.jpg" alt="Фоновое изображение" :ratio="16 / 9"
-            style="border-radius: 10px; max-width: 100%" />
+            style="border-radius: 10px; max-height: 300px" />
         </div>
 
         <div class="text-container" style="max-width: 800px; margin-top: 0px">
@@ -36,7 +36,7 @@
 
     <!-- ENROLL -->
     <section id="enroll">
-      <div class="q-md row d-flex justify-center" style="margin: auto; max-width: 1500px; margin-top: 20px">
+      <div class="q-md row d-flex justify-center" style="margin: auto; max-width: 1100px; margin-top: 20px">
         <div class="q-md col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center" style="padding: 10px">
           <q-card dark class="my-card">
             <q-img src="images/feedback.jpg" alt="Фоновое изображение" :ratio="16 / 12">
@@ -69,9 +69,9 @@
           <div class="q-pa-md row items-start q-gutter-md">
             <q-form @submit="submitForm" class="q-gutter-md" style="max-width: 600px; margin: 0 auto">
 
-              <q-input v-model="name" :label-color="(theme=='light') ? 'black' : 'white'" square filled type="text" :label="$t('dialog.name')" outlined />
-              <q-input v-model="phone" :label-color="(theme=='light') ? 'black' : 'white'" square filled type="tel" :label="$t('dialog.phone')" outlined />
-              <q-input v-model="text" :label-color="(theme=='light') ? 'black' : 'white'" square filled type="textarea" :label="$t('dialog.text')" outlined />
+              <q-input v-model="name" :dark="theme=='dark'" square filled type="text" :label="$t('dialog.name')" outlined />
+              <q-input v-model="phone" :dark="theme=='dark'" square filled type="tel" mask="+#-(###)-###-##-##" :label="$t('dialog.phone')" outlined />
+              <q-input v-model="text" :dark="theme=='dark'" square filled type="textarea" :label="$t('dialog.text')" outlined />
 
               <q-btn type="submit" :label="$t('dialog.button')" size="large" class="q-mt-md"
                 style="background-color: #000000; color: #ffffff" dense flat />

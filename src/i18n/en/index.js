@@ -20,11 +20,11 @@ export default {
     text1:
       "Development of web applications \nof any complexity level for medium and \nlarge companies, which includes \na full cycle: business analytics, \ndesign, development, implementation, \ntesting, maintenance and \nsupport",
     icon2: "public",
-    title2: "ГИС",
+    title2: "GIS",
     text2:
       "A system for providing information \non the geographical, spatial location \nand accounting of objects of \ntelecommunications networks, engineering \ninfrastructure, as well as cadastral \ninformation on a cartographic basis",
     icon3: "web",
-    title3: "Интеграция",
+    title3: "Integration",
     text3:
       "Business process integration module \nfor the movement of outfits \nand information web services",
   },
@@ -53,7 +53,7 @@ export default {
   features: {
     text1: "Maximum transparency \n of the entire development \n process for the customer",
     text2: "Experience working \n with IT projects of any \n level of complexity in a \n variety of directions",
-    text3: "Development of mobile applications, meeting all modern requirements",
+    text3: "Development of mobile applications, \n meeting all modern requirements",
   },
 
   softwareDevelopment: {

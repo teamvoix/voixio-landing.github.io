@@ -7,7 +7,7 @@
       <div :class="`body-content ${aboutImageDesktop}`" style="padding-top: 40px">
         <div :class="`${aboutImageDesktop}`" style="max-width: 600px; margin-bottom: 30px; margin-inline: 40px">
           <img src="images/expertise.jpg" alt="Фоновое изображение" :ratio="16 / 9"
-            style="border-radius: 10px; max-width: 100%; height: auto" />
+            style="border-radius: 10px; max-height: 300px; height: auto" />
         </div>
 
         <div class="text-container" style="max-width: 800px; white-space: pre-wrap">
@@ -40,7 +40,7 @@
       <div class="body-content">
         <div style="max-width: 600px; margin-top: 20px; margin-bottom: 20px; margin-inline: 40px">
           <img src="images/softwareDevelopment.jpg" alt="Фоновое изображение" :ratio="16 / 9"
-            style="border-radius: 10px; max-width: 100%; height: auto" />
+            style="border-radius: 10px; max-height: 300px; height: auto" />
         </div>
 
         <div class="text-container" style="max-width: 800px; white-space: pre-wrap">
