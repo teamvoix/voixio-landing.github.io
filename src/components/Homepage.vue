@@ -2,10 +2,10 @@
   <q-page>
     <!-- ABOUT -->
     <section id="about">
-      <div :class="`body-content ${aboutImageDesktop}`" style="padding-top: 40px">
-        <div :class="`${aboutImageDesktop}`" style="max-width: 600px; margin-bottom: 30px; margin-inline: 10px">
+      <div :class="`body-content`" style="padding-top: 40px">
+        <div style="max-width: 600px; margin-bottom: 30px; margin-inline: 10px">
           <img src="images/about.jpg" alt="Фоновое изображение" :ratio="16 / 9"
-            style="border-radius: 10px; max-height: 300px" />
+          :class="`${imageDesktop}`" style="border-radius: 10px; max-width: 100%" />
         </div>
 
         <div class="text-container" style="max-width: 800px; margin-top: 0px">
@@ -110,15 +110,15 @@ export default defineComponent({
 
       theme: theme,
 
-      aboutImageDesktop: ref(''),
+      imageDesktop: ref(''),
       aboutTextDesktop: ref(''),
     };
   },
 
   created() {
     if (this.$q.platform.is.desktop) {
-      this.aboutImageDesktop = 'about-image-desktop'
-      this.aboutTextDesktop = 'about-image-desktop'
+      this.imageDesktop = 'image-desktop'
+      this.aboutTextDesktop = 'image-desktop'
     }
   },
 

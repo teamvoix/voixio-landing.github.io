@@ -238,8 +238,9 @@ export default defineComponent({
   margin: 20px;
 }
 
-.about-image-desktop {
+.image-desktop {
   display: flex;
+  max-height: 300px;
 }
 
 .about-text-desktop {

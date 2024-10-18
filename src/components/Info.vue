@@ -4,10 +4,10 @@
   <q-page>
     <!-- EXPERTISE -->
     <section id="about">
-      <div :class="`body-content ${aboutImageDesktop}`" style="padding-top: 40px">
-        <div :class="`${aboutImageDesktop}`" style="max-width: 600px; margin-bottom: 30px; margin-inline: 40px">
+      <div :class="`body-content`" style="padding-top: 40px">
+        <div style="max-width: 600px; margin-bottom: 30px; margin-inline: 40px">
           <img src="images/expertise.jpg" alt="Фоновое изображение" :ratio="16 / 9"
-            style="border-radius: 10px; max-height: 300px; height: auto" />
+          :class="`${imageDesktop}`" style="border-radius: 10px; max-height: 300px; height: auto" />
         </div>
 
         <div class="text-container" style="max-width: 800px; white-space: pre-wrap">
@@ -99,15 +99,15 @@ export default defineComponent({
       deviceType,
       icons,
 
-      aboutImageDesktop: ref(''),
+      imageDesktop: ref(''),
       aboutTextDesktop: ref(''),
     };
   },
 
   created() {
     if (this.$q.platform.is.desktop) {
-      this.aboutImageDesktop = 'about-image-desktop'
-      this.aboutTextDesktop = 'about-image-desktop'
+      this.imageDesktop = 'image-desktop'
+      this.aboutTextDesktop = 'image-desktop'
     }
   },
 
