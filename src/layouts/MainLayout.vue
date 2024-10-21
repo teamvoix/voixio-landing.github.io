@@ -241,7 +241,7 @@ export default defineComponent({
 
 .image-desktop {
   display: flex;
-  max-height: 400px;
+  max-height: 350px;
 }
 
 .about-text-desktop {

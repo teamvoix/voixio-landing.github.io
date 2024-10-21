@@ -7,14 +7,14 @@
       <div :class="`${theme} body-content`">
         <div style="max-width: 600px; margin-bottom: 20px">
           <img src="images/ge1.jpg" alt="Фоновое изображение" :ratio="16 / 9"
-          :class="`${imageDesktop}`" style="border-radius: 10px; max-width: 100%" />
+            :class="`${imageDesktop}`" style="border-radius: 10px; max-width: 100%" />
         </div>
 
 
         <div class="text-container" style="max-width: 800px">
           <p style="font-size: 40px; margin-top: 10px">{{ $t('ge.title1') }}</p>
           <p style="font-size: 23px; margin-top: 25px; margin-bottom: 50px" v-for="n in 3" :key="n">{{
-        $t(`ge.text1p${n}`) }}</p><br />
+$t(`ge.text1p${n}`) }}</p><br />
         </div>
       </div>
     </section>
@@ -23,7 +23,7 @@
     <section id="about">
       <div class="body-content">
         <div style="max-width: 700px; margin-bottom: 50px">
-          <img src="images/ge2.png" :ratio="16 / 9" style="border-radius: 10px; max-width: 100%" />
+          <img src="images/ge2.png" :ratio="16 / 9" :class="`${imageDesktop}`" style="border-radius: 10px; max-width: 100%" />
         </div>
 
         <div style="max-width: 800px">
