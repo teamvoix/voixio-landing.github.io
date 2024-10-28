@@ -32,8 +32,8 @@ $t(`ge.text1p${n}`) }}</p><br />
 
         <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center; white-space: pre-wrap">
           <div v-for="n, index in icons" :key="n" class="custom-item text-center">
-            <q-avatar size="70px" :icon="n.icon" />
-            <p style="font-size: 20px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">
+            <q-avatar size="170px" :icon="n.icon" />
+            <p style="font-size: 22px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">
               {{ $t(`ge.li${index + 1}`) }}
             </p>
           </div>

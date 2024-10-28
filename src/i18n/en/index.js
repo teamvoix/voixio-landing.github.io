@@ -46,19 +46,21 @@ export default {
   },
 
   expertise: {
-    title: "Our expertise",
-    text: "Our company has accumulated extensive expertise in the field of information technology. The development team has extensive experience in automating business and technological processes for telecom operators and implementing IT products for various tasks and industries!",
+    title: "Software Development",
+    text: "Our company has accumulated extensive expertise in the field of information technology. We create both small websites and software for large industrial enterprises. We develop reliable and highly effective solutions that increase the productivity of your business.",
   },
 
   features: {
     text1: "Maximum transparency \n of the entire development \n process for the customer",
     text2: "Experience working \n with IT projects of any \n level of complexity in a \n variety of directions",
     text3: "Development of mobile applications, \n meeting all modern requirements",
+    text4: "In-depth business analysis, \n allowing to identify all \n the needs of your project \n and ensure its success",
+    text5: "Modern UI/UX design, \n creating intuitive \n interfaces and a unique \n user experience",
+    text6: "Support that guarantees \n the flawless operation of your \n product and prompt \n resolution of any issues",
   },
 
   softwareDevelopment: {
     title: "Software Development",
-    text1: "We create both small websites and software for large industrial enterprises. We develop reliable and highly effective solutions that increase the productivity of your business.",
 
     text2: "We carry out the full scope of work on the project",
     chip1: "Business analysis",
@@ -72,6 +74,16 @@ export default {
 
   competency: {
     title: "We use",
+  },
+
+  ourProjects: {
+    title: "Our projects",
+    example1: "VCIP Switch Tools",
+    example2: "VCIP Lite Maps",
+    example3: "Quiz UI",
+    example4: "VCIP Switch Tools",
+    example5: "VCIP Lite Maps",
+    example6: "Quiz UI",
   },
 
   ge: {

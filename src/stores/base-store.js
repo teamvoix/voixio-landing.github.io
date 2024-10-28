@@ -49,6 +49,15 @@ export const useBaseStore = defineStore("base", {
       {
         icon: "build_circle",
       },
+      {
+        icon: "dataset_linked",
+      },
+      {
+        icon: "keyboard_command_key",
+      },
+      {
+        icon: "star_rate",
+      },
     ],
     iconsGE: [
       {
