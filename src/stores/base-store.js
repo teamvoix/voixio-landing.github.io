@@ -34,6 +34,11 @@ export const useBaseStore = defineStore("base", {
         icon: "info",
       },
       {
+        label: "projects",
+        link: "nav.projects",
+        icon: "tab",
+      },
+      {
         label: "ge",
         link: "nav.ge",
         icon: "view_timeline",

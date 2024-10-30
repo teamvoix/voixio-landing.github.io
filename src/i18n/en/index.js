@@ -2,6 +2,7 @@ export default {
   nav: {
     homepage: "About us",
     info: "Software development",
+    projects: "Our projects",
     ge: "GE Solutions",
     close: "Close",
   },

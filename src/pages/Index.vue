@@ -10,6 +10,11 @@
       <Info />
     </section>
 
+    <!-- PROJECTS -->
+    <section v-show="sectionChoice == 'projects'" id="projects">
+      <Projects />
+    </section>
+
     <!-- GE -->
     <section v-show="sectionChoice == 'ge'" id="ge">
       <GE />
@@ -26,6 +31,7 @@ const baseStore = useBaseStore();
 
 import Homepage from 'components/Homepage.vue'
 import Info from 'components/Info.vue'
+import Projects from 'components/Projects.vue'
 import GE from 'components/GE.vue'
 
 
@@ -47,6 +53,7 @@ export default defineComponent({
   components: {
     Homepage,
     Info,
+    Projects,
     GE,
   },
 });

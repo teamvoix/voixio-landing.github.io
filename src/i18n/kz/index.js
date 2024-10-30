@@ -2,6 +2,7 @@ export default {
   nav: {
     homepage: "Біз туралы",
     info: "БҚ әзірлеу",
+    projects: "Біздің жобалар",
     ge: "GE шешімдері",
     close: "Жабу",
   },

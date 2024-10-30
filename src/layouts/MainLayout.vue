@@ -13,10 +13,12 @@
           </a>
         </q-toolbar-title>
 
-        <q-toolbar-title v-if="$q.platform.is.desktop">
+        <q-toolbar-title v-if="$q.platform.is.desktop" style="margin-left: -45px">
           <q-btn :label="$t('nav.homepage')" size="large" @click="setSectionChoice('homepage')"
             style="margin-inline: 10px" dense flat />
           <q-btn :label="$t('nav.info')" size="large" @click="setSectionChoice('info')"
+            style="margin-inline: 10px" dense flat />
+          <q-btn :label="$t('nav.projects')" size="large" @click="setSectionChoice('projects')"
             style="margin-inline: 10px" dense flat />
           <q-btn :label="$t('nav.ge')" size="large" @click="setSectionChoice('ge')"
             style="margin-inline: 10px" dense flat />
