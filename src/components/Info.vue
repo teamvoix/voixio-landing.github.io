@@ -36,7 +36,7 @@
     </section>
 
     <!-- COMPETENCY -->
-    <section id="competency" style="max-width: 800px; justify-content: center; align-items: center; margin: 0 auto">
+    <section id="competency" style="max-width: 700px; justify-content: center; align-items: center; margin: 0 auto">
       <h3 class="text-center">{{ $t('competency.title') }}</h3>
       <div class="row justify-center q-gutter-sm">
         <q-card flat bordered class="col-lg-3 col-sm-4 col-md-3" style="border: 2px solid grey; margin: 20px; width: 130px" v-for="n in 8">
