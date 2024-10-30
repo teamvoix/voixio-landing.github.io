@@ -13,8 +13,7 @@
 
         <div class="text-container" style="max-width: 800px">
           <p style="font-size: 40px; margin-top: 10px">{{ $t('ge.title1') }}</p>
-          <p style="font-size: 23px; margin-top: 25px; margin-bottom: 50px" v-for="n in 3" :key="n">{{
-$t(`ge.text1p${n}`) }}</p><br />
+          <p style="font-size: 23px; margin-top: 25px; margin-bottom: 50px" v-for="n in 3" :key="n">{{ $t(`ge.text1p${n}`) }}</p><br />
         </div>
       </div>
     </section>

@@ -36,10 +36,10 @@
     </section>
 
     <!-- COMPETENCY -->
-    <section id="competency" style="max-width: 900px; justify-content: center; align-items: center; margin: 0 auto">
+    <section id="competency" style="max-width: 800px; justify-content: center; align-items: center; margin: 0 auto">
       <h3 class="text-center">{{ $t('competency.title') }}</h3>
       <div class="row justify-center q-gutter-sm">
-        <q-card flat bordered class="col-lg-3 col-sm-4 col-md-3" style="border: 2px solid grey; margin: 20px; max-width: 150px" v-for="n in 8">
+        <q-card flat bordered class="col-lg-3 col-sm-4 col-md-3" style="border: 2px solid grey; margin: 20px; width: 130px" v-for="n in 8">
           <q-card-section :class="`${theme} text-center row items-center justify-center`" style="padding-bottom: 0px">
             <a :href="links[n - 1]"><img :src="images[n - 1]" style="height: 50px; width: 50px" />
               <p :class="theme">{{ names[n-1] }}</p>
