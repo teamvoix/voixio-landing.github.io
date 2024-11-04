@@ -10,7 +10,7 @@
           :class="`${imageDesktop}`" style="border-radius: 10px; max-width: 100%" />
         </div>
 
-        <div class="text-container" style="max-width: 800px; white-space: pre-wrap">
+        <div class="text-container" style="max-width: 800px; margin-top: -15px; white-space: pre-wrap">
           <p style="font-size: 40px">{{ $t('expertise.title') }}</p>
           <p :class="`text-container ${aboutTextDesktop}`" style="font-size: 23px">{{ $t('expertise.text') }}</p>
         </div>
@@ -19,7 +19,7 @@
 
     <!-- FEATURES -->
     <section id="about" style="margin-bottom: 50px">
-      <hr style="margin-inline: 100px; margin-top: 40px; margin-bottom: -30px" />
+      <hr :style="($q.platform.is.desktop) ? 'margin-inline: 100px; margin-top: -20px; margin-bottom: -30px' : 'margin-inline: 50px; margin-top: 20px; margin-bottom: -30px'" />
       <div class="body-content">
 
         <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center; white-space: pre-wrap; max-width: 1500px">
@@ -32,7 +32,7 @@
         </div>
 
       </div>
-      <hr style="margin-inline: 100px; margin-bottom: 100px" />
+      <hr :style="($q.platform.is.desktop) ? 'margin-inline: 100px; margin-top: 0px; margin-bottom: 0px' : 'margin-inline: 50px; margin-top: -20px; margin-bottom: 0px'" />
     </section>
 
     <!-- COMPETENCY -->

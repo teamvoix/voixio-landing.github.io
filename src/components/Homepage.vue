@@ -8,7 +8,7 @@
           :class="`${imageDesktop}`" style="border-radius: 10px; max-width: 100%" />
         </div>
 
-        <div class="text-container" style="max-width: 800px; margin-top: 0px">
+        <div class="text-container" style="max-width: 800px; margin-top: -15px">
           <p style="font-size: 40px">{{ $t('about.title') }}</p>
           <p :class="`text-container ${aboutTextDesktop}`" style="font-size: 23px">{{ $t('about.text') }}</p>
         </div>
@@ -18,7 +18,7 @@
 
     <!-- LIST -->
     <section id="list">
-      <hr style="margin-inline: 100px; margin-top: 40px" />
+      <hr :style="($q.platform.is.desktop) ? 'margin-inline: 100px; margin-top: -20px; margin-bottom: 0px' : 'margin-inline: 50px; margin-top: 0px; margin-bottom: 0px'" />
       <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center">
         <div class="custom-item text-center" v-for="n in 3" :key="n">
           <q-avatar size="170px" :icon="$t(`list.icon${n}`)" />
@@ -30,7 +30,7 @@
           </p>
         </div>
       </div>
-      <hr style="margin-inline: 100px; margin-bottom: 100px" />
+      <hr :style="($q.platform.is.desktop) ? 'margin-inline: 100px; margin-top: 0px; margin-bottom: 50px' : 'margin-inline: 50px; margin-top: 20px; margin-bottom: 50px'" />
     </section>
 
 

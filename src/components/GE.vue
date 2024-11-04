@@ -5,7 +5,7 @@
     <!-- BODY -->
     <section id="about">
       <div :class="`${theme} body-content`">
-        <div style="max-width: 600px; margin-bottom: 20px">
+        <div style="max-width: 600px; margin-bottom: 20px; margin-inline: 40px">
           <img src="images/ge1.jpg" alt="Фоновое изображение" :ratio="16 / 9"
             :class="`${imageDesktop}`" style="border-radius: 10px; max-width: 100%" />
         </div>
@@ -21,7 +21,7 @@
     <!-- FEATURES -->
     <section id="about">
       <div class="body-content">
-        <div style="max-width: 700px; margin-bottom: 50px">
+        <div style="max-width: 700px; margin-bottom: 40px">
           <img src="images/ge2.png" :ratio="16 / 9" :class="`${imageDesktop}`" style="border-radius: 10px; max-width: 100%" />
         </div>
 
@@ -29,10 +29,10 @@
           <p style="font-size: 34px; font-weight: bolder; margin-top: 0px">{{ $t('ge.title2') }}</p>
         </div>
 
-        <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center; white-space: pre-wrap">
+        <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center; white-space: pre-wrap; margin-top: -30px">
           <div v-for="n, index in icons" :key="n" class="custom-item text-center">
             <q-avatar size="170px" :icon="n.icon" />
-            <p style="font-size: 22px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">
+            <p style="font-size: 22px; font-weight: bold; margin-top: 0px; margin-bottom: 0px">
               {{ $t(`ge.li${index + 1}`) }}
             </p>
           </div>

@@ -5,24 +5,24 @@
     <!-- EXPERTISE -->
     <section id="projects">
       <div v-for="p, index in projects">
-        <div :class="($q.platform.is.desktop) ? `row` : `row text-center`" :align="(index%2==0) ? 'left' : 'right'" style="padding-top: 40px">
-          <div v-if="index%2==0 || $q.platform.is.mobile" style="max-width: 600px; margin-bottom: 30px; margin-inline: 40px">
+        <div :class="($q.platform.is.desktop) ? `flex flex-center` : `row text-center`" :align="(index%2==0) ? 'left' : 'right'" style="padding-top: 40px">
+          <div v-if="index%2==0 || $q.platform.is.mobile" style="max-width: 600px; margin-top: 0px; margin-bottom: 0px; margin-inline: 40px">
             <img :src="p.image" alt="Фоновое изображение" :ratio="16 / 9"
             :class="`${imageDesktop}`" style="border-radius: 10px; max-width: 100%" />
           </div>
 
-          <div class="text-container" :style="($q.platform.is.desktop) ? 'max-width: 600px; white-space: pre-wrap' : 'white-space: pre-wrap'">
+          <div class="text-container" :style="($q.platform.is.desktop) ? 'max-width: 600px; white-space: pre-wrap;' : 'white-space: pre-wrap;'">
             <p style="font-size: 40px">{{ p.name }}</p>
             <p :class="`text-container ${aboutTextDesktop}`" style="font-size: 23px">{{ $t('expertise.text') }}</p>
           </div>
 
-          <div v-if="index%2!=0 && !$q.platform.is.mobile" style="max-width: 600px; margin-bottom: 30px; margin-inline: 40px">
+          <div v-if="index%2!=0 && !$q.platform.is.mobile" style="max-width: 600px; margin-top: 0px; margin-bottom: 0px; margin-inline: 40px">
             <img :src="p.image" alt="Фоновое изображение" :ratio="16 / 9"
             :class="`${imageDesktop}`" style="border-radius: 10px; max-width: 100%" />
           </div>
         </div>
 
-        <hr style="margin-inline: 100px; margin-top: 50px; margin-bottom: 50px" />
+        <hr :style="($q.platform.is.desktop) ? 'margin-inline: 100px; margin-top: 50px; margin-bottom: 0px' : 'margin-inline: 50px; margin-top: 20px; margin-bottom: 0px'" />
       </div>
 
     </section>
@@ -74,6 +74,10 @@ export default defineComponent({
         {
           name: "VCIP Switch Tools",
           image: "images/projects/switchtools.png",
+        },
+        {
+          name: "VCIP Activator",
+          image: "images/projects/litemaps.png",
         },
       ],
     }
