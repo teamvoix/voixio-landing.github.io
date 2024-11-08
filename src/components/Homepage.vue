@@ -8,7 +8,7 @@
           :class="`${imageDesktop}`" style="border-radius: 10px; max-width: 100%" />
         </div>
 
-        <div class="text-container" style="max-width: 800px; margin-top: -15px">
+        <div class="text-container" style="max-width: 800px; margin-top: -15px; margin-bottom: 0px">
           <p style="font-size: 40px">{{ $t('about.title') }}</p>
           <p :class="`text-container ${aboutTextDesktop}`" style="font-size: 23px">{{ $t('about.text') }}</p>
         </div>
