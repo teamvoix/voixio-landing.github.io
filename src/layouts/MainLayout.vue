@@ -241,6 +241,16 @@ export default defineComponent({
   margin: 20px;
 }
 
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+  margin: 10px;
+}
+
 .image-desktop {
   display: flex;
   max-height: 350px;
