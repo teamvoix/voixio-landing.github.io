@@ -201,9 +201,10 @@ export default defineComponent({
       baseStore.setTheme();
     },
 
-    setSectionChoice(sc) {
-      baseStore.setSectionChoice(sc)
-      setTimeout(10000)
+    async setSectionChoice(sc) {
+      await window.scrollTo({ top: 0, behavior: 'smooth' })
+      await baseStore.setSectionChoice(sc)
+      await setTimeout(10000)
       this.dialog = false
     },
   }

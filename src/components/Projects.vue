@@ -6,19 +6,19 @@
     <section id="projects">
       <div v-for="p, index in projects" class="text-center">
         <div :class="($q.platform.is.desktop) ? `flex flex-center` : `row text-center`" :align="(index%2==0 && $q.platform.is.desktop) ? 'left' : 'right'" style="padding-top: 40px">
-          <div v-if="index%2==0 || $q.platform.is.mobile" :style="($q.platform.is.desktop) ? `max-width: 600px; margin-top: 0px; margin-bottom: 0px; margin-left: 100px` : `max-width: 350px`">
+          <div v-if="index%2==0 || $q.platform.is.mobile" :style="($q.platform.is.desktop) ? `max-width: 600px; margin-top: 0px; margin-bottom: 0px; margin-left: 100px` : `max-width: 350px; margin: auto`">
             <img :src="p.image" alt="Фоновое изображение" :ratio="16 / 9" :class="`${imageDesktop}`"
-              clickable @click="imageDialog=true" style="border-radius: 10px; max-width: 100%" />
+              clickable @click="imageDialog=true; selectedImage=p.image" style="border-radius: 10px; max-width: 100%" />
           </div>
 
-          <div class="text-container" :style="($q.platform.is.desktop) ? 'margin-inline: 0px; white-space: pre-wrap;' : 'white-space: pre-wrap;'">
-            <p :style="($q.platform.is.desktop) ? 'margin-inline: 80px; font-size: 40px' : 'font-size: 40px'">{{ p.name }}</p>
+          <div class="text-container" :style="($q.platform.is.desktop) ? 'margin-inline: 0px; white-space: pre-wrap' : 'white-space: pre-wrap'">
+            <p :style="($q.platform.is.desktop) ? 'margin-inline: 80px; font-size: 40px' : 'font-size: 40px; margin-top: 5px; margin-bottom: 5px'">{{ p.name }}</p>
             <p :class="`text-container ${aboutTextDesktop}`" :style="($q.platform.is.desktop) ? 'margin-inline: 80px; font-size: 23px' : 'font-size: 23px'">{{ $t(`ourProjects.text${index+1}`) }}</p>
           </div>
 
-          <div v-if="index%2!=0 && !$q.platform.is.mobile" :style="($q.platform.is.desktop) ? `max-width: 600px; margin-top: 0px; margin-bottom: 0px; margin-right: 100px` : `max-width: 350px`">
+          <div v-if="index%2!=0 && !$q.platform.is.mobile" :style="($q.platform.is.desktop) ? `max-width: 600px; margin-top: 0px; margin-bottom: 0px; margin-right: 100px` : `max-width: 350px; margin: auto`">
             <img :src="p.image" alt="Фоновое изображение" :ratio="16 / 9" :class="`${imageDesktop}`"
-              clickable @click="imageDialog=true" style="border-radius: 10px; max-width: 100%" />
+              clickable @click="imageDialog=true; selectedImage=p.image" style="border-radius: 10px; max-width: 100%" />
           </div>
         </div>
 
@@ -28,12 +28,12 @@
 
 
     <!-- IMAGE-DIALOG -->
-    <q-dialog v-model="imageDialog">
+    <q-dialog v-model="imageDialog" full-width>
       <q-card :class="theme">
 
         <div :class="`dialog-content`">
-          <div :style="($q.platform.is.desktop) ? 'max-width: 1200px; margin-bottom: 10px; margin-inline: 10px' : 'max-width: 300px; margin-inline: 10px'">
-            <img :class="`${imageDesktop}`" src="images/projects/switchtools.png" alt="Фоновое изображение" style="border-radius: 10px; max-width: 100%; aspect-ratio: 16/9" />
+          <div :style="($q.platform.is.desktop) ? 'max-width: 80%; margin-bottom: 0px; margin-inline: 10px' : 'max-width: 300px; margin-inline: 10px'">
+            <img :class="``" :src="selectedImage" alt="Фоновое изображение" style="border-radius: 10px; max-width: 100%; aspect-ratio: 16/9" />
           </div>
 
           <q-btn flat outline :label="$t('nav.close')" v-close-popup />
@@ -70,6 +70,7 @@ export default defineComponent({
       aboutTextDesktop: ref(''),
 
       imageDialog: ref(false),
+      selectedImage: ref(''),
     };
   },
 
