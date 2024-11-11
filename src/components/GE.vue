@@ -6,7 +6,7 @@
     <section id="about">
       <div :class="`${theme} body-content`">
         <div style="max-width: 600px; margin-bottom: 20px; margin-inline: 40px">
-          <img src="images/ge1.jpg" alt="Фоновое изображение" :ratio="16 / 9"
+          <img src="images/ge1.jpg" alt="Фоновое изображение" :ratio="16 / 9" @click="openImage('images/ge1.jpg')"
             :class="`${imageDesktop}`" style="border-radius: 10px; max-width: 100%" />
         </div>
 
@@ -22,7 +22,8 @@
     <section id="about">
       <div class="body-content">
         <div style="max-width: 700px; margin-bottom: 40px">
-          <img src="images/ge2.png" :ratio="16 / 9" :class="`${imageDesktop}`" style="border-radius: 10px; max-width: 100%" />
+          <img src="images/ge2.png" :ratio="16 / 9" @click="openImage('images/ge2.png')"
+            :class="`${imageDesktop}`" style="border-radius: 10px; max-width: 100%" />
         </div>
 
         <div style="max-width: 800px">
@@ -41,12 +42,18 @@
       </div>
     </section>
 
+    <!-- IMAGE-DIALOG -->
+    <q-dialog v-model="imageDialog" full-width>
+      <ImageDialog />
+    </q-dialog>
   </q-page>
 </template>
 
 <script>
 import { defineComponent, ref, computed } from "vue";
 import { useQuasar } from "quasar";
+
+import ImageDialog from 'components/ImageDialog.vue'
 
 import { useBaseStore } from "src/stores/base-store.js";
 const baseStore = useBaseStore();
@@ -64,7 +71,22 @@ export default defineComponent({
       theme,
       icons,
       imageDesktop: ref(''),
+
+      imageDialog: ref(false),
+      selectedImage: ref(''),
     }
+  },
+
+  components: {
+    ImageDialog,
+  },
+
+  methods: {
+    async openImage(image) {
+      await console.log(image)
+      await baseStore.setSelectedImage(image)
+      this.imageDialog = true
+    },
   },
 
   created() {

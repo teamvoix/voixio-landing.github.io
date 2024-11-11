@@ -4,7 +4,7 @@
     <section id="about">
       <div :class="`body-content`" style="padding-top: 40px">
         <div style="max-width: 600px; margin-bottom: 30px; margin-inline: 10px">
-          <img src="images/about.jpg" alt="Фоновое изображение" :ratio="16 / 9"
+          <img src="images/about.jpg" alt="Фоновое изображение" :ratio="16 / 9" @click="openImage('images/about.jpg')"
           :class="`${imageDesktop}`" style="border-radius: 10px; max-width: 100%" />
         </div>
 
@@ -80,12 +80,19 @@
         </div>
       </q-card>
     </q-dialog>
+
+    <!-- IMAGE-DIALOG -->
+    <q-dialog v-model="imageDialog" full-width>
+      <ImageDialog />
+    </q-dialog>
   </q-page>
 </template>
 
 <script>
 import { defineComponent, ref, computed } from "vue";
 import { useQuasar, Notify } from "quasar";
+
+import ImageDialog from 'components/ImageDialog.vue'
 
 import { useBaseStore } from "src/stores/base-store.js";
 const baseStore = useBaseStore();
@@ -112,7 +119,14 @@ export default defineComponent({
 
       imageDesktop: ref(''),
       aboutTextDesktop: ref(''),
+
+      imageDialog: ref(false),
+      selectedImage: ref(''),
     };
+  },
+
+  components: {
+    ImageDialog,
   },
 
   created() {
@@ -147,6 +161,12 @@ export default defineComponent({
         Notify.create({ message: `${error.message}`, position: "center" })
         throw error;
       }
+    },
+
+    async openImage(image) {
+      await console.log(image)
+      await baseStore.setSelectedImage(image)
+      this.imageDialog = true
     },
   }
 });

@@ -8,7 +8,7 @@
         <div :class="($q.platform.is.desktop) ? `flex flex-center` : `row text-center`" :align="(index%2==0 && $q.platform.is.desktop) ? 'left' : 'right'" style="padding-top: 40px">
           <div v-if="index%2==0 || $q.platform.is.mobile" :style="($q.platform.is.desktop) ? `max-width: 600px; margin-top: 0px; margin-bottom: 0px; margin-left: 100px` : `max-width: 350px; margin: auto`">
             <img :src="p.image" alt="Фоновое изображение" :ratio="16 / 9" :class="`${imageDesktop}`"
-              clickable @click="imageDialog=true; selectedImage=p.image" style="border-radius: 10px; max-width: 100%" />
+              clickable @click="openImage(p.image)" style="border-radius: 10px; max-width: 100%" />
           </div>
 
           <div class="text-container" :style="($q.platform.is.desktop) ? 'margin-inline: 0px; white-space: pre-wrap' : 'white-space: pre-wrap'">
@@ -18,7 +18,7 @@
 
           <div v-if="index%2!=0 && !$q.platform.is.mobile" :style="($q.platform.is.desktop) ? `max-width: 600px; margin-top: 0px; margin-bottom: 0px; margin-right: 100px` : `max-width: 350px; margin: auto`">
             <img :src="p.image" alt="Фоновое изображение" :ratio="16 / 9" :class="`${imageDesktop}`"
-              clickable @click="imageDialog=true; selectedImage=p.image" style="border-radius: 10px; max-width: 100%" />
+              clickable @click="openImage(p.image)" style="border-radius: 10px; max-width: 100%" />
           </div>
         </div>
 
@@ -29,17 +29,7 @@
 
     <!-- IMAGE-DIALOG -->
     <q-dialog v-model="imageDialog" full-width>
-      <q-card :class="theme">
-
-        <div :class="`dialog-content`">
-          <div :style="($q.platform.is.desktop) ? 'max-width: 80%; margin-bottom: 0px; margin-inline: 10px' : 'max-width: 300px; margin-inline: 10px'">
-            <img :class="``" :src="selectedImage" alt="Фоновое изображение" style="border-radius: 10px; max-width: 100%; aspect-ratio: 16/9" />
-          </div>
-
-          <q-btn flat outline :label="$t('nav.close')" v-close-popup />
-        </div>
-
-      </q-card>
+      <ImageDialog />
     </q-dialog>
   </q-page>
 </template>
@@ -47,6 +37,8 @@
 <script>
 import { defineComponent, ref, computed } from "vue";
 import { useQuasar } from "quasar";
+
+import ImageDialog from 'components/ImageDialog.vue'
 
 import { useBaseStore } from "src/stores/base-store.js";
 const baseStore = useBaseStore();
@@ -74,11 +66,23 @@ export default defineComponent({
     };
   },
 
+  components: {
+    ImageDialog,
+  },
+
   created() {
     if (this.$q.platform.is.desktop) {
       this.imageDesktop = 'image-desktop'
       this.aboutTextDesktop = 'image-desktop'
     }
+  },
+
+  methods: {
+    async openImage(image) {
+      await console.log(image)
+      await baseStore.setSelectedImage(image)
+      this.imageDialog = true
+    },
   },
 
   data() {

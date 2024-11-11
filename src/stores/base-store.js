@@ -85,6 +85,7 @@ export const useBaseStore = defineStore("base", {
       },
     ],
     sectionChoice: "homepage",
+    selectedImage: "",
   }),
   getters: {
     getTheme() {
@@ -114,6 +115,9 @@ export const useBaseStore = defineStore("base", {
     },
     getSectionChoice() {
       return this.sectionChoice
+    },
+    getSelectedImage() {
+      return this.selectedImage
     },
   },
   actions: {
@@ -145,7 +149,10 @@ export const useBaseStore = defineStore("base", {
       return this.links;
     },
     setSectionChoice(sectionChoice) {
-      this.sectionChoice =  sectionChoice
+      this.sectionChoice = sectionChoice
+    },
+    setSelectedImage(selectedImage) {
+      this.selectedImage = selectedImage
     },
   },
 });
