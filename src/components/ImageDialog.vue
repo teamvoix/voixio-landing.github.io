@@ -3,7 +3,7 @@
 
     <div :class="`dialog-content`">
       <div :style="($q.platform.is.desktop) ? 'max-width: 60%; margin-bottom: 0px; margin-inline: 10px' : 'max-width: 300px; margin-inline: 10px'">
-        <img :class="``" :src="selectedImage" alt="Фоновое изображение" style="border-radius: 10px; max-width: 100%; aspect-ratio: 16/9" />
+        <img :class="``" :src="selectedImage" alt="Фоновое изображение" :style="($q.platform.is.desktop) ? 'border-radius: 10px; min-width: 1000px; max-width: 100%' : 'border-radius: 10px; max-width: 100%'" />
       </div>
 
       <q-btn flat outline :label="$t('nav.close')" v-close-popup />

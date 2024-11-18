@@ -25,7 +25,7 @@
           <p style="font-size: 30px; font-weight: bold; margin-top: 0px; margin-bottom: 20px">
             {{ $t(`list.title${n}`) }}
           </p>
-          <p style="font-size: 20px; white-space: pre-line">
+          <p style="font-size: 20px; white-space: pre-wrap; max-width: 500px; margin: auto">
             {{ $t(`list.text${n}`) }}
           </p>
         </div>

@@ -5,7 +5,7 @@
     <!-- PROJECTS -->
     <section id="projects">
       <div v-for="p, index in projects" class="text-center">
-        <div :class="($q.platform.is.desktop) ? `flex flex-center` : `row text-center`" :align="(index%2==0 && $q.platform.is.desktop) ? 'left' : 'right'" style="padding-top: 40px">
+        <div :class="($q.platform.is.desktop) ? `flex flex-center` : `row text-center`" :align="(index%2==0 && $q.platform.is.desktop) ? 'center' : 'center'" style="padding-top: 40px">
           <div v-if="index%2==0 || $q.platform.is.mobile" :style="($q.platform.is.desktop) ? `max-width: 600px; margin-top: 0px; margin-bottom: 0px; margin-left: 100px` : `max-width: 350px; margin: auto`">
             <img :src="p.image" alt="Фоновое изображение" :ratio="16 / 9" :class="`${imageDesktop}`"
               clickable @click="openImage(p.image)" style="border-radius: 10px; max-width: 100%" />

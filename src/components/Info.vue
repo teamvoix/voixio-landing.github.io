@@ -22,10 +22,10 @@
       <hr :style="($q.platform.is.desktop) ? 'margin-inline: 100px; margin-top: -20px; margin-bottom: -30px' : 'margin-inline: 50px; margin-top: 20px; margin-bottom: -30px'" />
       <div class="body-content">
 
-        <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center; white-space: pre-wrap; max-width: 1500px">
+        <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center; white-space: pre-wrap; max-width: 1500px; margin-bottom: 20px">
           <div v-for="n, index in icons" class="custom-item text-center">
             <q-avatar size="170px" :icon="n.icon" />
-            <p style="font-size: 22px">
+            <p style="font-size: 22px; white-space: pre-wrap; max-width: 400px; margin: auto">
               {{ $t(`features.text${index+1}`) }}
             </p>
           </div>

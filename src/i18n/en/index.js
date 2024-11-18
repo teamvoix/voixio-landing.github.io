@@ -19,15 +19,15 @@ export default {
     icon1: "dvr",
     title1: "Web-applications",
     text1:
-      "Development of web applications \nof any complexity level for medium and \nlarge companies, which includes \na full cycle: business analytics, \ndesign, development, implementation, \ntesting, maintenance and \nsupport",
+      "Development of web applications of any complexity level for medium and large companies, which includes a full cycle: business analytics, design, development, implementation, testing, maintenance and support",
     icon2: "public",
     title2: "GIS",
     text2:
-      "A system for providing information \non the geographical, spatial location \nand accounting of objects of \ntelecommunications networks, engineering \ninfrastructure, as well as cadastral \ninformation on a cartographic basis",
+      "A system for providing information on the geographical, spatial location and accounting of objects of telecommunications networks, engineering infrastructure, as well as cadastral information on a cartographic basis",
     icon3: "web",
     title3: "Integration",
     text3:
-      "Business process integration module \nfor the movement of outfits \nand information web services",
+      "Business process integration module for the movement of outfits and information web services",
   },
 
   content: {
@@ -52,12 +52,12 @@ export default {
   },
 
   features: {
-    text1: "Maximum transparency \n of the entire development \n process for the customer",
-    text2: "Experience working \n with IT projects of any \n level of complexity in a \n variety of directions",
-    text3: "Development of mobile applications, \n meeting all modern requirements",
-    text4: "In-depth business analysis, \n allowing to identify all \n the needs of your project \n and ensure its success",
-    text5: "Modern UI/UX design, \n creating intuitive \n interfaces and a unique \n user experience",
-    text6: "Support that guarantees \n the flawless operation of your \n product and prompt \n resolution of any issues",
+    text1: "Maximum transparency of the entire development process for the customer",
+    text2: "Experience working with IT projects of any level of complexity in a variety of directions",
+    text3: "Development of mobile applications, meeting all modern requirements",
+    text4: "In-depth business analysis, allowing to identify all the needs of your project and ensure its success",
+    text5: "Modern UI/UX design, creating intuitive interfaces and a unique user experience",
+    text6: "Support that guarantees the flawless operation of your product and prompt resolution of any issues",
   },
 
   softwareDevelopment: {
@@ -79,9 +79,9 @@ export default {
 
   ourProjects: {
     title: "Our Projects",
-    text1: "Voix Lite!Maps (LM) is a Kazakhstani geographic information system with a web interface. It allows creating a unified centralized database of the company's assets. LM is a highly scalable and flexible software solution suitable for large and medium businesses as well as small enterprises.",
+    text1: "Voix Lite!Maps (LM) is an advanced geographic information system with a web interface. Allows you to create a single centralized database of enterprise assets.  LM is a highly scalable and flexible software solution and is suitable for both large and medium-sized businesses and small enterprises.",
     text2: "VCIP Switch Tools has been modified to perform individual and mass switchovers on optical access network equipment. The functionality and interface of this module are identical for both copper and optical access network switchovers. Therefore, the user has access to all functions for creating and processing switch orders in a single interface.",
-    text3: "Our solution for order processing and resource reservation for telecommunication services ensures efficient management of installation and configuration requests for services (such as broadband, telephony, IPTV) for subscribers. This includes automation of the order processing workflow, resource reservation for various access network technologies (copper, optical, and wireless networks), and managing service assignments through a user-friendly and intuitive web application. \n \n A professional and high-performance system supporting business and technological processes for the installation, replacement, and removal of a wide range of telecom services (telephony, broadband, IPTV, etc.), with the ability to perform a pre-installation feasibility check at the subscriber's address.",
+    text3: "Our solution for order processing and resource reservation for telecommunication services ensures efficient management of installation and configuration requests for services (such as broadband, telephony, IPTV) for subscribers. This includes automation of the order processing workflow, resource reservation for various access network technologies (copper, optical, and wireless networks), and managing service assignments through a user-friendly and intuitive web application. A professional and high-performance system supporting business and technological processes for the installation, replacement, and removal of a wide range of telecom services (telephony, broadband, IPTV, etc.), with the ability to perform a pre-installation feasibility check at the subscriber's address.",
   },
 
   ge: {
@@ -97,12 +97,12 @@ export default {
     text2:
       "Smallworld Network Inventory is a highly scalable solution that supports an extensive list of more than 140 customers in 37 countries around the world. This list includes not only large national telecommunications operators such as Kazakhtelecom, Deutsche Telekom, Swiss Telecom, but also small companies with a turnover of less than 1 million euros per year. Thanks to a wide range of technological modules, the solution is equally well suited for cable multiservice operators, cable TV operators, long-distance operators, cellular operators and wireless operators. The Smallworld Network Inventory solution works successfully even in the most difficult conditions, when competing products cannot cope with their tasks. True scalability means that the Smallworld Network Inventory system fully works even in the largest telecommunications companies with their extensive databases of hundreds of terabytes and thousands of system users. And, of course, the solution is also well suited for medium and small operators. Using the Smallworld Network Inventory system allows you to ensure a quick return on investment:",
 
-    li1: "Scalable solution \n suitable for medium and \n small operators",
-    li2: "It works with extensive \n databases of hundreds of \n terabytes and thousands of users",
-    li3: "Fast service delivery \n with minimal errors and risks",
-    li4: "Reducing \n troubleshooting time",
-    li5: "Allows you to ensure \n a quick return on investment",
-    li6: "Supports a list of over \n 140 clients in 37 countries",
+    li1: "Scalable solution suitable for medium and small operators",
+    li2: "It works with extensive databases of hundreds of terabytes and thousands of users",
+    li3: "Fast service delivery with minimal errors and risks",
+    li4: "Reducing troubleshooting time",
+    li5: "Allows you to ensure a quick return on investment",
+    li6: "Supports a list of over 140 clients in 37 countries",
   },
 
   notFound: {

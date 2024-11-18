@@ -33,7 +33,7 @@
         <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center; white-space: pre-wrap; margin-top: -30px">
           <div v-for="n, index in icons" :key="n" class="custom-item text-center">
             <q-avatar size="170px" :icon="n.icon" />
-            <p style="font-size: 22px; font-weight: bold; margin-top: 0px; margin-bottom: 0px">
+            <p style="font-size: 22px; font-weight: bold; margin-top: 0px; margin-bottom: 0px; white-space: pre-wrap; max-width: 400px; margin: auto">
               {{ $t(`ge.li${index + 1}`) }}
             </p>
           </div>
