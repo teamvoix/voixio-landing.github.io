@@ -114,21 +114,21 @@
       <q-separator color="gray" inset spaced />
       <br />
       <div class="row justify-around" style="height: 70px">
-        <div v-if="theme == 'light'" class="col-12 col-md-1">
+        <div v-if="theme == 'light'" class="col-12 col-md-2">
           <img src="images/logolebedev.png" height="40" style="padding-top: 8px" /><br />
         </div>
-        <div v-else class="col-12 col-md-1">
+        <div v-else class="col-12 col-md-2">
           <img src="images/darklebedev.png" height="40" style="padding-top: 8px" /><br />
         </div>
-        <div class="col-12 col-md-1">
+        <div class="col-12 col-md-2">
           <q-icon name="mail" size="24px" /><br />
           <a href="mailto:team@voix.io" :class="theme">team@voix.io</a>
         </div>
-        <div class="col-12 col-md-1">
+        <div class="col-12 col-md-2">
           <q-icon name="call" size="24px" /><br />
           <a href="tel:+77273315800" :class="theme">+7 (727) 331 58 00</a>
         </div>
-        <div class="col-12 col-md-1">
+        <div class="col-12 col-md-2">
           <q-icon name="location_on" size="24px" /><br />
           <a href="https://go.2gis.com/m8u4qg" :class="theme">Kazakhstan, Almaty, 151 Minbayev st, office 35</a>
         </div>
@@ -197,8 +197,12 @@ export default defineComponent({
   },
 
   methods: {
-    setTheme() {
-      baseStore.setTheme();
+    async setTheme() {
+      await baseStore.setTheme();
+      if (this.$.platform.is.iphone) {
+        await this.$router.push("/")
+        await this.$router.go(0)
+      }
     },
 
     async setSectionChoice(sc) {

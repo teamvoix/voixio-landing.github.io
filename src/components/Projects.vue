@@ -5,18 +5,18 @@
     <!-- PROJECTS -->
     <section id="projects">
       <div v-for="p, index in projects" class="text-center">
-        <div :class="($q.platform.is.desktop) ? `flex flex-center` : `row text-center`" :align="(index%2==0 && $q.platform.is.desktop) ? 'center' : 'center'" style="padding-top: 40px">
-          <div v-if="index%2==0 || $q.platform.is.mobile" :style="($q.platform.is.desktop) ? `max-width: 600px; margin-top: 0px; margin-bottom: 0px; margin-left: 100px` : `max-width: 350px; margin: auto`">
+        <div :class="($q.platform.is.desktop) ? `flex flex-center` : `row text-center`" :align="center" style="padding-top: 40px">
+          <div v-if="index%2==0 || $q.platform.is.mobile" :style="($q.platform.is.desktop) ? `max-width: 600px; margin-top: 0px; margin-bottom: 0px; margin-left: 220px; margin-right: -100px` : `max-width: 350px; margin: auto`">
             <img :src="p.image" alt="Фоновое изображение" :ratio="16 / 9" :class="`${imageDesktop}`"
               clickable @click="openImage(p.image)" style="border-radius: 10px; max-width: 100%" />
           </div>
 
           <div class="text-container" :style="($q.platform.is.desktop) ? 'margin-inline: 0px; white-space: pre-wrap' : 'white-space: pre-wrap'">
             <p :style="($q.platform.is.desktop) ? 'margin-inline: 80px; font-size: 40px' : 'font-size: 40px; margin-top: 5px; margin-bottom: 5px'">{{ p.name }}</p>
-            <p :class="`text-container ${aboutTextDesktop}`" :style="($q.platform.is.desktop) ? 'margin-inline: 80px; font-size: 23px' : 'font-size: 23px'">{{ $t(`ourProjects.text${index+1}`) }}</p>
+            <p :class="`text-container ${aboutTextDesktop}`" :style="($q.platform.is.desktop) ? 'margin-inline: 230px; font-size: 23px' : 'font-size: 23px'">{{ $t(`ourProjects.text${index+1}`) }}</p>
           </div>
 
-          <div v-if="index%2!=0 && !$q.platform.is.mobile" :style="($q.platform.is.desktop) ? `max-width: 600px; margin-top: 0px; margin-bottom: 0px; margin-right: 100px` : `max-width: 350px; margin: auto`">
+          <div v-if="index%2!=0 && !$q.platform.is.mobile" :style="($q.platform.is.desktop) ? `max-width: 600px; margin-top: 0px; margin-bottom: 0px; margin-right: 220px; margin-left: -100px` : `max-width: 350px; margin: auto`">
             <img :src="p.image" alt="Фоновое изображение" :ratio="16 / 9" :class="`${imageDesktop}`"
               clickable @click="openImage(p.image)" style="border-radius: 10px; max-width: 100%" />
           </div>
@@ -24,6 +24,7 @@
 
         <p :style="($q.platform.is.desktop) ? 'margin-inline: 100px; margin-top: 80px; margin-bottom: 0px' : 'margin-inline: 50px; margin-top: 20px; margin-bottom: 0px'" />
       </div>
+      <p v-if="$q.platform.is.desktop" style="margin-bottom: 180px" />
     </section>
 
 
