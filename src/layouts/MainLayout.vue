@@ -199,7 +199,7 @@ export default defineComponent({
   methods: {
     async setTheme() {
       await baseStore.setTheme();
-      if (this.$.platform.is.iphone) {
+      if ($q.platform.is.iphone) {
         await this.$router.push("/")
         await this.$router.go(0)
       }
