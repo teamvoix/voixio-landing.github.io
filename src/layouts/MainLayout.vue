@@ -13,7 +13,7 @@
           </a>
         </q-toolbar-title>
 
-        <q-toolbar-title v-if="$q.platform.is.desktop" style="margin-left: -45px">
+        <q-toolbar-title v-if="$q.platform.is.desktop" style="margin-left: -180px; margin-right: -140px">
           <q-btn :label="$t('nav.homepage')" size="large" @click="setSectionChoice('homepage')"
             style="margin-inline: 10px" dense flat />
           <q-btn :label="$t('nav.info')" size="large" @click="setSectionChoice('info')"
